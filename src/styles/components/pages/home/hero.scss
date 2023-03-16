@@ -1,0 +1,82 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 50px 70px;
+  &__title {
+    color: $black;
+    font-family: $font-family-title;
+    font-weight: 700;
+    font-size: $font-size-XXL;
+  }
+  &__image {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-bg {
+      position: relative;
+      width: 95%;
+      height: 95%;
+      overflow: hidden;
+      background: $black;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &-container {
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &-small {
+      width: 230px;
+      margin: 0 auto;
+      opacity: 0;
+      transition: all 0.2s linear;
+      &.start-animation {
+        opacity: 1;
+      }
+    }
+  }
+  &__button {
+    position: relative;
+    z-index: 10;
+    transform: translateY(-20%);
+    opacity: 0;
+    &.start-animation {
+      @include animation-slide-down(0.3s, 1.2s);
+    }
+  }
+}
+
+#heroMask {
+  position: absolute;
+  top: 0;
+  width: 105%;
+  height: 105%;
+}
+
+#circleGradient {
+  top: 50%;
+  transform: translate(-50%, -30%) scale(0);
+  &.start-animation {
+    animation: fillTextColor 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes fillTextColor {
+  to {
+    transform: translate(-50%, -30%) scale(2.8);
+  }
+}

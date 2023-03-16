@@ -1,0 +1,30 @@
+.primary-button {
+  display: inline-block;
+  padding: 7px 50px;
+  color: $black;
+  font-weight: 400;
+  background: $green;
+  border-radius: 50px;
+  border: 2px solid $green;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $white;
+  }
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 10px 30px;
+  color: $black;
+  font-weight: 500;
+  background: $white;
+  border-radius: 50px;
+  border: 2px solid $green;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $green;
+  }
+}
+

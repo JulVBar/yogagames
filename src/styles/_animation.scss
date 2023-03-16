@@ -37,7 +37,7 @@
 
 @keyframes slide-down {
     from {
-        transform: translateY(-120%);
+        transform: translateY(-20%);
         opacity: 0;
     }
     to {
@@ -48,7 +48,7 @@
 
 @keyframes slide-up {
     0% {
-        transform: translateY(120%);
+        transform: translateY(20%);
         opacity: 0;
     }
     100% {
@@ -65,7 +65,7 @@
 }
 
 @mixin animation-slide-down ($duration, $delay) {
-    transform: translateY(-120%);
+    transform: translateY(-20%);
     opacity: 0;
     animation: slide-down $duration linear forwards;
     animation-delay: $delay;

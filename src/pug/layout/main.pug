@@ -8,8 +8,6 @@ html(lang='ru')
     //- Fonts
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-    //- Icon font
-    script(src='https://kit.fontawesome.com/9ca2acc967.js' crossorigin='anonymous')
     //- Useful meta tags
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
@@ -28,9 +26,9 @@ html(lang='ru')
   body(class=bodyClass)
     //- .preloader
     
-    .btn-to-top
-      svg
-        use(xlink:href='images/icon/sprite.svg#arrow-left')
+    //- .btn-to-top
+    //-   svg
+    //-     use(xlink:href='images/icon/sprite.svg#arrow-left')
     .page(class=pageClass)
       include ../includes/modules/header
       main.main

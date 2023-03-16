@@ -1,20 +1,36 @@
 $white:rgb(255, 255, 255);
-$black:rgb(0, 0, 0);
+$black:#303030;
 
 //colors
-$red: #d997f6;
-$gray:#3ca6fe;
-$dark-gray:#3ca6fe;
 
+$gray:#F5F5F5;
+$gray-2:#fcfbfa;
+$gray-dark:#92949A;
+$green: #D2F179;
+$red: #F84F39;
+$yellow: #FFC940;
+$purple: #B797D7;
+$purple-dark: #6B66DA;
+$orange: #FF903E;
+$pink: #FF7EAA;
+$blue: #73AEFC;
+$fucia: #FA425F;
+$gradient: linear-gradient(90deg, $yellow 3.25%, $pink 35.3%, $purple 62.01%, $blue 97.78%);
+
+$br: 50px;
+$page-padding: 5vw;
 
 //font size
 $font-size-S: 16px;
 $font-size-M: 18px;
 $font-size-L: 24px;
-$font-size-XL: 35px;
+$font-size-XL: 36px;
+$font-size-XXL: 50px;
+$font-size-XXXL: 70px;
 
 
 $font-family: 'Manrope', sans-serif;
+$font-family-title: 'Balsamiq Sans', cursive;
 
 //z-index
 $z-index-header:  1000;
@@ -27,8 +43,8 @@ $mini-tablet: 768px;
 $mobile: 480px; 
 $mini-mobile: 360px; 
 
-$main-shadow:
-    0 80px 80px -20px rgba(154, 156, 165, 0.08),
-    0 30px 24px -10px rgba(154, 156, 165, 0.05),
-    0 12px 10px -6px rgba(154, 156, 165, 0.04),
-    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+// $main-shadow:
+//     0 80px 80px -20px rgba(154, 156, 165, 0.08),
+//     0 30px 24px -10px rgba(154, 156, 165, 0.05),
+//     0 12px 10px -6px rgba(154, 156, 165, 0.04),
+//     0 4px 4px -4px rgba(30, 33, 44, 0.03);

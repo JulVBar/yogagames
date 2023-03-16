@@ -10,9 +10,20 @@ block main-vars
 block content
   section
     .container
-      h1.title Title
-      img.img(src='images/test.png' alt='')
-      img.img(src='images/slider/slider.jpg' alt='')
+      section#hero.hero.big-section
+        h1.hero__title YOGA GAMES FOR KIDS
+        .hero__image
+          .hero__image-bg 
+            img#circleGradient.image-contain(src="images/hero/circle_gradient.svg", alt="1" data-animation)
+          img#heroMask.image-contain(src="images/hero/yoga_mask.svg", alt="")
+          .hero__image-container
+            .hero__image-small.image-contain(data-animation)
+              img(src="images/hero/hero_kid_1.png", alt="")
+            .hero__image-small.image-contain9(data-animation)
+              img(src="images/hero/hero_kid_2.png", alt="")
+            .hero__image-small.image-contain(data-animation)
+              img(src="images/hero/hero_kid_3.png", alt="")
+        button.hero__button.primary-button(data-animation) Register For Class
   example-component
 
 

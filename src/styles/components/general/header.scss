@@ -1,18 +1,209 @@
 .header {
   &__container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  &__logo {
-    display: block;
-    width: 160px;
-    height: 80px;
-    img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: contain;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 70px;
+    &-right {
+      display: flex;
+      align-items: center;
     }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    p {
+      color: $black;
+      font-weight: 500;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    li:not(:last-child) {
+      margin-right: 30px;
+    }
+    a {
+      color: $gray-dark;
+      &:hover {
+        color: $black;
+      }
+    }
+
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2*$page-padding);
+    transition: all .2s ease-in-out;
+    position: fixed;
+    z-index: 99;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    &.upped {
+      top: 0px;
+    }
+  }
+  &__menu {
+    background: $white;
+    border-radius: $br;
+    width: 100%;
+    padding: 0px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav {
+    display: flex;
+    margin-right: 100px;
+    li {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+      a {
+        color: $black;
+        font-weight: 500;
+        display: block;
+        padding: 20px 0;
+        transition: all .2s ease-in-out;
+        position: relative;
+        z-index: 2;
+        &:hover ~ .nav__hover {
+          transform: translate(-50%, -50%) scale(1);
+          animation: rotate-hover 3s linear infinite;
+          animation-delay: 0.2s;
+        }
+        &.active ~ .nav__hover {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+}
+
+.nav__hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background: $green;
+  border-radius: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.nav li ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 95%;
+  background: $white;
+  border-radius: $br;
+  width: 100%;
+  padding: 0 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s linear;
+
+  li {
+    position: relative;
+    width: 250px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+    a {
+      color: $black;
+      font-weight: 700;
+      font-size: $font-size-L;
+      line-height: 140%;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      &:hover ~ .subnav__hover {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.nav li:has(ul) a {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid $green;
+  }
+}
+
+.nav li:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav li ul li .nav__hover {
+  display: none;
+}
+
+.nav li ul li a:after {
+  display: none;
+}
+
+.subnav__hover {
+  transition: all .3s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px;
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes rotate-hover {
+  from {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+  to {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
   }
 }

@@ -5,11 +5,11 @@ html {
 
 body {
     margin: 0;
-    background-color: $black;
+    background-color: $gray-2;
     font-family: $font-family;
     line-height: 140%;
     font-weight: 400;
-    color: $gray;
+    color: $black;
     font-size: $font-size-M;
     @include breakpoint($mobile) {
         font-size: $font-size-S;
@@ -34,6 +34,11 @@ h1, h2, h3, h4, h5 {
 
 a {
     text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
 }
 
 img {
@@ -66,24 +71,23 @@ img {
     flex-flow: column nowrap;
     // width: 100vw;
     min-height: 100vh;
+    padding: 0 $page-padding;
 }
 
 main {
     flex: 1 1 auto;
-    background: rgb(245, 245, 150);
     overflow: hidden;
+    padding-top: 45px;
     //if header fixed
     // padding-top: $header-height;
 }
 
 header {
     flex: 0 0 $header-height;
-    background: rgb(125, 209, 125);
 }
 
 footer {
     flex: 0 0 150px;
-    background: rgb(132, 132, 224);
 }
 
 section {
@@ -98,8 +102,7 @@ section {
 
 .container {
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 1180px;
+    width: 100%;
 }
 
 // Preloader
@@ -126,3 +129,8 @@ section {
     }
 }
 
+.big-section {
+    padding: 70px;
+    border-radius: $br;
+    background: $white;
+}

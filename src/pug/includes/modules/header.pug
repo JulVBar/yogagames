@@ -1,5 +1,38 @@
 header.header
   .header__container.container
-    a(href="index.html").header__logo
-      img(src="images/logo/logo.png", alt="logo")
-    include ../blocks/navigation
+    .header__top
+      a(href="index.html").header__logo
+        img(src="images/logo/logo_no_text.svg", alt="logo")
+        p BEST YOGA KIDS PROGRAMM
+      .header__top-right
+        ul.header__social.list-reset
+          li
+            a(href="#" target="blank") Youtube
+          li
+            a(href="#" target="blank") Facebook
+          li
+            a(href="#" target="blank") Instagram
+    .header__bottom
+      .header__menu
+        nav
+          ul.nav.list-reset.header__nav
+            li.nav__item
+              a(href="#about-us").nav__link About Us
+              ul
+                li
+                  a(href="#") Yoga relax
+                li
+                  a(href="#") Yoga nidra meditation
+                li
+                  a(href="#") Meditation with Tibetan bowls
+            li.nav__item
+              a(href="#").nav__link Schedule
+            li.nav__item
+              a(href="#").nav__link Prices
+            li.nav__item
+              a(href="#").nav__link Birthday Party
+            li.nav__item
+              a(href="#").nav__link For Adults
+            li.nav__item
+              a(href="#").nav__link Retreat
+        a(href="#").primary-button Contact us
