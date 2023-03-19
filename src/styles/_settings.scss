@@ -27,8 +27,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1, h2, h3, h4, h5 {
-    color: $white;
-    letter-spacing: 1.5px;
+    color: $black;
     line-height: 140%;
 }
 
@@ -77,27 +76,17 @@ img {
 main {
     flex: 1 1 auto;
     overflow: hidden;
-    padding-top: 45px;
+    padding-top: 140px;
     //if header fixed
     // padding-top: $header-height;
 }
 
 header {
-    flex: 0 0 $header-height;
+    flex: 0 0 auto;
 }
 
 footer {
-    flex: 0 0 150px;
-}
-
-section {
-    margin-bottom: 150px;
-    @include breakpoint($tablet) {
-        margin-bottom: 100px;
-    }
-    @include breakpoint($mini-tablet) {
-        margin-bottom: 50px;
-    }
+    flex: 0 0 auto;
 }
 
 .container {
@@ -129,8 +118,3 @@ section {
     }
 }
 
-.big-section {
-    padding: 70px;
-    border-radius: $br;
-    background: $white;
-}

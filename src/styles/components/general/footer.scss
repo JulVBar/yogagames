@@ -1,10 +1,94 @@
 .footer {
-  nav ul {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    display: flex;
     flex-direction: column;
-    li {
-      &:not(:last-child) {
-        margin-right: 0px;
-        margin-bottom: 10px;
+    min-width: 250px;
+    &-title {
+      color: $black;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+  &__logo {
+    width: 130px;
+    height: 105px;
+  }
+  nav ul li {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    a {
+      color: $gray-dark;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: -25px;
+        margin: -7px 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 2px;
+        background: $green;
+        transform: scale(0);
+        transition: all .2s ease-in-out;
+      }
+      &:hover::after {
+        transform: scale(1);
+        animation: rotate-scale 3s linear infinite;
+        animation-delay: 0.2s;
+      }
+    }
+  }
+  &__contacts {
+    &-link {
+      color: $gray-dark;
+      font-weight: 400;
+      transition: all .2s ease-in-out;
+      &:hover {
+        color: $green;
+        font-weight: 700;
+      }
+    }
+    a:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__social {
+    width: 100%;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    li:not(:last-child) {
+      margin-right: 30px;
+    }
+    a {
+      color: $gray-dark;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  &__copyright {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    color: $gray-dark;
+    font-size: 12px;
+    margin-bottom: 10px;
+    a {
+      color: $gray-dark;
+      font-weight: 500;
+      margin-left: 5px;
+      &:hover {
+        color: $black;
       }
     }
   }

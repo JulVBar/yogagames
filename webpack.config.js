@@ -154,6 +154,10 @@ module.exports = {
                         },
                     }
                     ]
+            },
+            {
+                test: /\.min.js$/,
+                use: [ 'script-loader' ]
             }
         ]
     },

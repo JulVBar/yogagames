@@ -1,0 +1,28 @@
+.party {
+  border: 2px solid $pink;
+  background: $pink;
+  display: flex;
+  transition: all .3s ease-in-out;
+  &__image {
+    width: 50%;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: all .5s linear;
+    &-wrapper {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 450px;
+      height: 450px;
+    }
+  }
+  &__content {
+    width: 50%;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,75 @@
+.about {
+  text-align: center;
+  position: relative;
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 1000px;
+  }
+  &__image {
+    position: absolute;
+    &-one {
+      width: 180px;
+      height: 270px;
+      top: 30%;
+      right: 5%;
+    }
+    &-two {
+      width: 150px;
+      height: 150px;
+      top: 30%;
+      left: 5%;
+    }
+    &-three {
+      width: 180px;
+      height: 120px;
+      top: 55%;
+      left: 10%;
+    }
+  }
+  img {
+    border-radius: 20px;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__text {
+    max-width: 600px;
+    font-size: $font-size-L;
+    font-family: $font-family-title;
+    color: $black;
+    line-height: 180%;
+    font-weight: 400;
+    &-colored {
+      margin: 0 5px;
+      color: $purple-dark;
+    }
+    &.start-animation {
+      color: $purple-dark;
+    }
+    &-lined {
+      position: relative;
+    }
+    &-mark {
+      position: absolute;
+      z-index: 1;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(90deg, #FFD5CC 3.3%, #FCDBF9 100%);
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 20px;
+      transition: all 0.5s linear;
+      .scroll-animation {
+        width: 120%;
+      }
+    }
+    &-pointed {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

@@ -3,13 +3,25 @@ import './styles/main.scss';
 import preloader from './js/preloader';
 import btnToTop from './js/btn-to-top';
 import main from './js/main';
+import smother from './gsap/ScrollSmoother.min.js';
+import gsapAnimation from './js/gsapAnimation';
+
 
 
 window.addEventListener('DOMContentLoaded', function() {
     preloader();
     btnToTop();
     main();
-    
+		gsapAnimation();
+
+		if (ScrollTrigger.isTouch !== 1) {
+			ScrollSmoother.create({
+				wrapper: '.wrapper',
+				content: '.page',
+				smooth: 1.5,
+				effects: true
+			})
+		}
 });
 
 // load all images
@@ -25,4 +37,7 @@ function importAll(r) {
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
     return images;
 }
+
+
+
 

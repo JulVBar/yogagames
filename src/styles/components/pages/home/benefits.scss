@@ -1,0 +1,43 @@
+.benefits {
+  margin-bottom: $section-margin;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 32.45%;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(11),
+    &:nth-child(12) {
+      width: 49.45%;
+    }
+    &-header {
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    &-image {
+      width: 50px;
+      height: 50px;
+    }
+    &-title {
+      width: 85%;
+      font-weight: 700;
+      font-size: $font-size-M;
+      padding-left: 30px;
+    }
+  }
+  &__button {
+    display: block;
+    width: 100%;
+  }
+}

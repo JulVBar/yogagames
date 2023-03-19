@@ -4,29 +4,22 @@
     bottom: 20px;
     right: 20px;
 
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
     border-radius: 50%;
-    background: $black;
+    background: $white;
     box-shadow: none;
+    border: 1px solid $green;
 
     display: none;
     justify-content: center;
     align-items: center;
-    transform: translate(-50%, 0) rotate(45deg);
-    transition: all .2s ease;
     cursor: pointer;
-
-    &:hover {
-        transform: translate(-50%, -10%) rotate(45deg);
-    }
-
-    svg {
-        width: 10px;
-        height: 10px;
-        fill: $white;
-        transform: rotate(45deg);
+    img {
+        width: 15px;
+        height: 15px;
+        transform: rotate(90deg);
     }
     &.active {
         display: flex;

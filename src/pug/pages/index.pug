@@ -8,22 +8,107 @@ block main-vars
   - var pageClass = 'page__home';
 
 block content
-  section
-    .container
-      section#hero.hero.big-section
-        h1.hero__title YOGA GAMES FOR KIDS
-        .hero__image
-          .hero__image-bg 
-            img#circleGradient.image-contain(src="images/hero/circle_gradient.svg", alt="1" data-animation)
-          img#heroMask.image-contain(src="images/hero/yoga_mask.svg", alt="")
-          .hero__image-container
-            .hero__image-small.image-contain(data-animation)
-              img(src="images/hero/hero_kid_1.png", alt="")
-            .hero__image-small.image-contain9(data-animation)
-              img(src="images/hero/hero_kid_2.png", alt="")
-            .hero__image-small.image-contain(data-animation)
-              img(src="images/hero/hero_kid_3.png", alt="")
-        button.hero__button.primary-button(data-animation) Register For Class
+  .container
+    section#hero.hero.big-section
+      h1.hero__title YOGA GAMES FOR KIDS
+      .hero__image
+        .hero__image-bg 
+          img#circleGradient.image-contain(src="images/hero/circle_gradient.svg", alt="1" data-animation)
+        img#heroMask.image-contain(src="images/hero/yoga_mask.svg", alt="")
+        .hero__image-container
+          .hero__image-small.image-contain(data-animation)
+            img(src="images/hero/hero_kid_1.png", alt="")
+          .hero__image-small.image-contain9(data-animation)
+            img(src="images/hero/hero_kid_2.png", alt="")
+          .hero__image-small.image-contain(data-animation)
+            img(src="images/hero/hero_kid_3.png", alt="")
+      button.hero__button.primary-button(data-animation) Register For Class
+    section#about.about.big-section
+      h2.about__title.section-title Know yourself through playing
+      .about__image.about__image-one(data-speed="2" data-lag="0.5")
+        img.image-cover(src="images/girl_7.jpg", alt="")
+      .about__image.about__image-two(data-speed="2" data-lag="4")
+        img.image-cover(src="images/meditation_1.jpg", alt="")
+      .about__image.about__image-three(data-speed="2" data-lag="4")
+        img.image-cover(src="images/kids_4.jpg", alt="")
+      .about__content
+        p.about__text This is a
+          span.about__text-colored regular practice
+          |yoga games for kids 4-8 years.
+        p.about__text Yoga games develop children physically, mentally, emotionally and creatively.
+        p.about__text  It is a universal system for the education of a
+        p.about__text.about__text-lined
+          span.about__text-mark
+          span.about__text-pointed harmonious personality
+    section#benefits.benefits
+      .benefits__list
+        .benefits__card.mid-section
+          .benefits__card-header
+            .benefits__card-image
+              img.image-contain(src="images/icon/relaxed.png", alt="")
+            h3.benefits__card-title Creates an emotional harmony
+          .benefits__card-text Our curriculum focuses on providing a toolkit for life's challenges. Yoga creates a positive outlook, increases confidence, and builds resilience tools that kids
+        .benefits__card.mid-section
+          .benefits__card-header
+            .benefits__card-image
+              img.image-contain(src="images/icon/target.png", alt="")
+            h3.benefits__card-title Improves focus and concentration
+          .benefits__card-text Our approach empowers youth by allowing them to become more aware by learning how to relax their bodies and minds
+        .benefits__card.mid-section
+          .benefits__card-header
+            .benefits__card-image
+              img.image-contain(src="images/icon/digital-clock.png", alt="")
+            h3.benefits__card-title Develops discipline
+          .benefits__card-text They learn more about their minds, and how they can affect not only their own attitudes
+        .benefits__card.mid-section
+          .benefits__card-header
+            .benefits__card-image
+              img.image-contain(src="images/icon/idea.png", alt="")
+            h3.benefits__card-title Sparks the creativity
+          .benefits__card-text Our curriculum focuses on teaching the acceptance and tolerance of others
+        .benefits__card.mid-section
+          .benefits__card-header
+            .benefits__card-image
+              img.image-contain(src="images/icon/anantasana.png", alt="")
+            h3.benefits__card-title Promotes  flexibility
+          .benefits__card-text In practicing yoga, kids learn early in life that all living beings are to be cherished
+      a(href="#").primary-button.benefits__button About Program
+    section#party.party.big-section
+      .party__image
+        .party__image-wrapper
+          img.image-cover(src="images/birthday_1.jpg", alt="")
+      .party__content
+        h2.section-square-title Yoga Birthday Party
+        p.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity for parents to understand more about the nature of their child
+        a(href="#").primary-button.party__content-button Explore
+    section#adult.adult
+      .adult__content.big-section.section-square
+        .section-square-content
+          h2.section-square-title Classes for Parents
+          p.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity for parents to understand more about the nature of their child, with them to tune in
+          a(href="#").primary-button.party__content-button All Classes
+      .adult__image.big-section.section-square-image
+        .adult__image-wrapper.image-parallax
+          img.image-cover(src="images/woman_14.jpg", alt="")
+    section#retreat.retreat
+      .retreat__image.big-section.section-square-image
+          .retreat__image-wrapper.image-parallax
+            img.image-cover(src="images/meditation_2.jpg", alt="")
+      .retreat__content.big-section.section-square
+        .section-square-content
+          h2.section-square-title Retreats
+          p.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity
+          a(href="#").primary-button.party__content-button Learn More
+      
+      
+
+
+
+
+
+
+
+
   example-component
 
 

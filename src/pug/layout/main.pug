@@ -18,6 +18,9 @@ html(lang='ru')
     //- Swiper CDN
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
     script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    //-GSAP
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer)
     //- meta
     meta(name='description' content=description)
     meta(name='keywords' content=keywords)
@@ -26,14 +29,14 @@ html(lang='ru')
   body(class=bodyClass)
     //- .preloader
     
-    //- .btn-to-top
-    //-   svg
-    //-     use(xlink:href='images/icon/sprite.svg#arrow-left')
-    .page(class=pageClass)
-      include ../includes/modules/header
-      main.main
-        block content
-      include ../includes/modules/footer
+    .btn-to-top
+      img.image-contain(src="images/icon/arrow.svg", alt="")
+    include ../includes/modules/header
+    .wrapper
+      .page(class=pageClass)
+        main.main
+          block content
+        include ../includes/modules/footer
 
 
     block script

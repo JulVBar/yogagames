@@ -1,0 +1,19 @@
+.retreat {
+  display: flex;
+  justify-content: space-between;
+  transition: all .5s ease-in-out;
+  &__content {
+    border: 2px solid $orange;
+    background: $orange;
+  }
+  &__image {
+    overflow: hidden;
+    position: relative;
+    &-wrapper {
+      height: 100%;
+      position: absolute;
+      width: 110%;
+      height: 110%;
+    }
+  }
+}

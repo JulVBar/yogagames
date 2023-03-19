@@ -32,7 +32,7 @@
     }
     &-container {
       position: absolute;
-      bottom: 50px;
+      bottom: 80px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -71,7 +71,7 @@
   transform: translate(-50%, -30%) scale(0);
   &.start-animation {
     animation: fillTextColor 1s ease-in-out forwards;
-    animation-delay: 1s;
+    animation-delay: 0.3s;
   }
 }
 

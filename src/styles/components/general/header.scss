@@ -41,7 +41,6 @@
         color: $black;
       }
     }
-
   }
   &__bottom {
     display: flex;
@@ -83,12 +82,12 @@
         position: relative;
         z-index: 2;
         &:hover ~ .nav__hover {
-          transform: translate(-50%, -50%) scale(1);
-          animation: rotate-hover 3s linear infinite;
+          transform: scale(1);
+          animation: rotate-scale 3s linear infinite;
           animation-delay: 0.2s;
         }
         &.active ~ .nav__hover {
-          transform: translate(-50%, -50%) scale(1);
+          transform: scale(1);
         }
       }
     }
@@ -99,7 +98,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  margin: -20px;
+  transform: scale(0);
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -197,13 +197,4 @@
   margin: -50px;
   transform: scale(0);
   opacity: 0;
-}
-
-@keyframes rotate-hover {
-  from {
-      transform: translate(-50%, -50%) scale(1) rotate(0deg);
-  }
-  to {
-      transform: translate(-50%, -50%) scale(1) rotate(360deg);
-  }
 }
