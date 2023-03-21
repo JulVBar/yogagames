@@ -34,6 +34,9 @@
       font-weight: 700;
       font-size: $font-size-M;
       padding-left: 30px;
+      @include breakpoint($desktop) {
+        font-size: $font-size-S;
+      }
     }
   }
   &__button {

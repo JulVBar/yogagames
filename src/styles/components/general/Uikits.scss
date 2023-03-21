@@ -1,7 +1,8 @@
 .primary-button {
   display: inline-block;
-  padding: 5px 50px;
-  min-width: 250px;
+  padding: 5px 30px;
+  // min-width: 250px;
+  min-height: 38px;
   color: $black;
   font-weight: 400;
   text-align: center;
@@ -37,18 +38,27 @@
   border-radius: $br;
   background: $white;
   margin-bottom: $section-margin;
+  @include breakpoint($desktop) {
+    padding: 50px;
+  }
 }
 .mid-section {
   padding: 50px 70px;
   border-radius: $br;
   background: $white;
   margin-bottom: $section-margin;
+  @include breakpoint($desktop) {
+    padding: 30px 50px;
+  }
 }
 .small-section {
   padding: 20px 70px;
   border-radius: $br;
   background: $white;
   margin-bottom: $section-margin;
+  @include breakpoint($desktop) {
+    padding: 20px 50px;
+  }
 }
 
 .section-title {
@@ -79,7 +89,7 @@
   justify-content: center;
   align-items: center;
   border-radius: $br;
-  height: 600px;
+  min-height: 35vw;
   &-content {
     display: flex;
     flex-direction: column;
@@ -90,5 +100,5 @@
   width: 49.45%;
   padding: 0;
   overflow: hidden;
-  height: 600px;
+  min-height: 35vw;
 }

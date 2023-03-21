@@ -15,6 +15,12 @@ $minWidth: 23; //23rem 375px
     background-attachment: fixed;
     background-position: center center;
 }
+@mixin bg-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center center;
+}
 
 @mixin flex {
     display: flex;

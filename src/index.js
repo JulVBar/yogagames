@@ -5,6 +5,7 @@ import btnToTop from './js/btn-to-top';
 import main from './js/main';
 import smother from './gsap/ScrollSmoother.min.js';
 import gsapAnimation from './js/gsapAnimation';
+import videoSlider from './js/videoSlider';
 
 
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
     btnToTop();
     main();
 		gsapAnimation();
+		videoSlider();
 
 		if (ScrollTrigger.isTouch !== 1) {
 			ScrollSmoother.create({

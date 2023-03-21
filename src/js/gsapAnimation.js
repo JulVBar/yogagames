@@ -22,9 +22,9 @@ function gsapAnimation() {
         }
     })
 
-    let itemsL = gsap.utils.toArray('.benefits__card')
+    let benefitsCards = gsap.utils.toArray('.benefits__card')
 			
-    itemsL.forEach(item => {
+    benefitsCards.forEach(item => {
         gsap.fromTo(item, { opacity: 0, y: 500 }, {
             opacity: 1, y: 0,
             scrollTrigger: {
@@ -100,7 +100,18 @@ function gsapAnimation() {
         }
     })
 
-    
+    let lastPosts = gsap.utils.toArray('.last-posts__item')
+    lastPosts.forEach(item => {
+        gsap.fromTo(item, { y: 70 }, {
+            y: 0,
+            scrollTrigger: {
+                trigger: item,
+                start: '-1100',
+                end: 'top',
+                scrub: true
+            }
+        })
+    })
 
 
 

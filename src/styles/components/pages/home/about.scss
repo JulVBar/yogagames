@@ -13,18 +13,33 @@
       height: 270px;
       top: 30%;
       right: 5%;
+      @include breakpoint($desktop) {
+        width: 120px;
+        height: 200px;
+      }
     }
     &-two {
       width: 150px;
       height: 150px;
       top: 30%;
       left: 5%;
+      @include breakpoint($desktop) {
+        width: 100px;
+        height: 100px;
+        top: 40%;
+      }
     }
     &-three {
       width: 180px;
       height: 120px;
-      top: 55%;
+      top: 50%;
       left: 10%;
+      @include breakpoint($desktop) {
+        width: 130px;
+        height: 90px;
+        top: 60%;
+        left: 5%;
+      }
     }
   }
   img {

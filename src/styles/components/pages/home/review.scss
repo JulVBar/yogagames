@@ -1,0 +1,56 @@
+.review {
+  &__content {
+    text-align: center;
+    h2 {
+      padding-bottom: 50px;
+    }
+  }
+  &__swiper {
+    position: relative;
+  }
+  &__slide {
+    height: 500px;
+  }
+  &__video {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  &__navigation-next,
+  &__navigation-prev {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    svg {
+      fill: $green;
+      width: 40px;
+      height: 60px;
+    }
+    
+  }
+  &__navigation-next {
+    right: 10%;
+    transform: translateY(-50%) rotate(180deg);
+    @include breakpoint(1400px) {
+      right: 0px;
+    }
+  }
+  &__navigation-prev {
+    left: 10%;
+    @include breakpoint(1400px) {
+      left: 0px;
+    }
+  }
+}
+
+.swiper-button-disabled {
+  svg {
+    fill: #e9e6e6;
+    cursor: not-allowed;
+  }
+}
+
+
+

@@ -234,14 +234,22 @@ function main() {
 
     //Paralax images
 
-    let bg = document.querySelectorAll('.image-parallax');
-    for (let i = 0; i < bg.length; i++){
-        window.addEventListener('mousemove', function(e) { 
-            let x = e.clientX / window.innerWidth;
-            let y = e.clientY / window.innerHeight;     
-            bg[i].style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-        });    
+    function parallaxImage(parentClass, imageClass) {
+        let image = document.querySelector(imageClass);
+        let parent = document.querySelector(parentClass);
+
+        if (image && parent) {
+            window.addEventListener('mousemove', function(e) { 
+                let x = e.clientX / window.innerWidth;
+                let y = e.clientY / window.innerHeight;
+                image.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
+            });
+        }
     }
+    
+    
+    parallaxImage('.adult', '.adult__image-wrapper img');
+    parallaxImage('.retreat', '.retreat__image-wrapper');
 }
 
 export default main;

@@ -16,6 +16,9 @@
       width: 450px;
       height: 450px;
     }
+    @include breakpoint($desktop) {
+      padding-right: 50px;
+    }
   }
   &__content {
     width: 50%;
@@ -24,5 +27,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include breakpoint($desktop) {
+      padding-left: 50px;
+    }
   }
 }

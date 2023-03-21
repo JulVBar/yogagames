@@ -20,8 +20,9 @@
 @import "components/general/UIkits";
 @import "components/general/btn-to-top";
 @import "components/general/preloader";
+@import "components/general/videoplayer";
 
-
+@import "components/blocks/last-posts";
 
 /* Pages*/
 @import "components/pages/home/hero";
@@ -30,5 +31,8 @@
 @import "components/pages/home/party";
 @import "components/pages/home/adult";
 @import "components/pages/home/retreat";
+@import "components/pages/home/review";
+@import "components/pages/home/news-title";
+
 
 
