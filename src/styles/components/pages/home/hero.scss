@@ -3,12 +3,18 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 50px 70px;
   &__title {
     color: $black;
     font-family: $font-family-title;
     font-weight: 700;
-    font-size: $font-size-XXL;
+    font-size: $font-size-XXXL;
+    text-align: center;
+    @include breakpoint($desktop) {
+      font-size: $font-size-XXL;
+    }
+    @include breakpoint($mini-tablet) {
+      font-size: $font-size-XL;
+    }
   }
   &__image {
     position: relative;
@@ -17,6 +23,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include breakpoint($desktop) {
+      width: 768px;
+      height: 300px;
+    }
+    @include breakpoint($mini-tablet) {
+      width: 480px;
+      height: 200px;
+    }
+    @include breakpoint($mobile) {
+      width: 350px;
+      height: 140px;
+      margin-bottom: 20px;
+    }
     &-bg {
       position: relative;
       width: 95%;
@@ -37,14 +56,22 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      @include breakpoint($mobile) {
+        bottom: 10px;
+      }
     }
     &-small {
-      width: 230px;
+      width: 25%;
       margin: 0 auto;
       opacity: 0;
       transition: all 0.2s linear;
       &.start-animation {
         opacity: 1;
+      }
+      &:not(:first-child) {
+        @include breakpoint($mobile) {
+          display: none;
+        }
       }
     }
   }

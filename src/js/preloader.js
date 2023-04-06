@@ -12,9 +12,7 @@ function preloader() {
             const animatedElems = document.querySelectorAll('[data-animation]');
             
             if (animatedElems && animatedElems?.length > 0) {
-                if (window.pageYOffset === 0) {
-                    animatedElems.forEach(item=>item.classList.add('start-animation'));
-                }
+                animatedElems.forEach(item=>item.classList.add('start-animation'));
             }
         }, 0);
     };

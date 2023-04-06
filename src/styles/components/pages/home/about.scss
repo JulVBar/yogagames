@@ -5,9 +5,21 @@
     margin: 0 auto;
     margin-bottom: 50px;
     max-width: 1000px;
+    @include breakpoint($mini-tablet) {
+      margin-bottom: 30px;
+    }
+    @include breakpoint(600px) {
+      margin-bottom: 20px;
+    }
   }
   &__image {
     position: absolute;
+    @include breakpoint(600px) {
+      display: none;
+    }
+    img {
+      transition: all .5s linear;
+    }
     &-one {
       width: 180px;
       height: 270px;
@@ -16,6 +28,10 @@
       @include breakpoint($desktop) {
         width: 120px;
         height: 200px;
+      }
+      @include breakpoint($mini-tablet) {
+        width: 90px;
+        height: 150px;
       }
     }
     &-two {
@@ -26,7 +42,11 @@
       @include breakpoint($desktop) {
         width: 100px;
         height: 100px;
-        top: 40%;
+        top: 20%;
+      }
+      @include breakpoint($mini-tablet) {
+        width: 80px;
+        height: 80px;
       }
     }
     &-three {
@@ -38,7 +58,12 @@
         width: 130px;
         height: 90px;
         top: 60%;
-        left: 5%;
+        left: 2%;
+      }
+      @include breakpoint($mini-tablet) {
+        width: 100px;
+        height: 70px;
+        top: 55%;
       }
     }
   }
@@ -58,6 +83,16 @@
     color: $black;
     line-height: 180%;
     font-weight: 400;
+    @include breakpoint($desktop) {
+      max-width: 475px;
+    }
+    @include breakpoint($mini-tablet) {
+      max-width: 350px;
+      font-size: $font-size-M;
+    }
+    @include breakpoint(600px) {
+      max-width: 100%;
+    }
     &-colored {
       margin: 0 5px;
       color: $purple-dark;

@@ -2,11 +2,13 @@
 import './styles/main.scss';
 import preloader from './js/preloader';
 import btnToTop from './js/btn-to-top';
+import burger from './js/burger';
 import main from './js/main';
 import smother from './gsap/ScrollSmoother.min.js';
 import gsapAnimation from './js/gsapAnimation';
 import videoSlider from './js/videoSlider';
-
+import modal from './js/modal';
+import form from './js/form';
 
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -15,6 +17,9 @@ window.addEventListener('DOMContentLoaded', function() {
     main();
 		gsapAnimation();
 		videoSlider();
+		burger();
+		modal();
+		form();
 
 		if (ScrollTrigger.isTouch !== 1) {
 			ScrollSmoother.create({
@@ -26,8 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
 });
 
-// load all images
-//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)
+
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
 const logo = importAll(require.context('./images/logo', false, /\.(png|jpe?g|svg|gif)$/));
 const hero = importAll(require.context('./images/hero', false, /\.(png|jpe?g|svg|gif)$/));

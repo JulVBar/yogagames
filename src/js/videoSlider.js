@@ -1,9 +1,9 @@
 function videoSlider() {
   var reviewSwiper = new Swiper(".review__swiper", {
     speed: 1000,
-    navigation: {
-      nextEl: ".review__navigation-next",
-      prevEl: ".review__navigation-prev",
+    pagination: {
+      el: ".review__pagination",
+      clickable: true
     },
   });
 

@@ -7,6 +7,9 @@ block main-vars
   - var bodyClass = 'body';
   - var pageClass = 'page__home';
 
+  
+    
+
 block content
   .container
     section#hero.hero.big-section
@@ -18,18 +21,18 @@ block content
         .hero__image-container
           .hero__image-small.image-contain(data-animation)
             img(src="images/hero/hero_kid_1.png", alt="")
-          .hero__image-small.image-contain9(data-animation)
+          .hero__image-small.image-contain(data-animation)
             img(src="images/hero/hero_kid_2.png", alt="")
           .hero__image-small.image-contain(data-animation)
             img(src="images/hero/hero_kid_3.png", alt="")
-      button.hero__button.primary-button(data-animation) Register For Class
+      button.hero__button.primary-button(data-animation data-modal="modal-1") Register For Class
     section#about.about.big-section
       h2.about__title.section-title Know yourself through playing
-      .about__image.about__image-one.image-cover(data-speed="2" data-lag="0.5")
+      .about__image.about__image-one.image-cover
         img(src="images/girl_7.jpg", alt="")
-      .about__image.about__image-two.image-cover(data-speed="2" data-lag="4")
+      .about__image.about__image-two.image-cover
         img(src="images/meditation_1.jpg", alt="")
-      .about__image.about__image-three.image-cover(data-speed="2" data-lag="4")
+      .about__image.about__image-three.image-cover
         img(src="images/kids_4.jpg", alt="")
       .about__content
         p.about__text This is a
@@ -73,33 +76,35 @@ block content
             h3.benefits__card-title Promotes  flexibility
           .benefits__card-text In practicing yoga, kids learn early in life that all living beings are to be cherished
       a(href="#").primary-button.benefits__button About Program
+      a(href="#").primary-button.benefits__button--circle About Program
     section#party.party.big-section
       .party__image
         .party__image-wrapper.image-cover
           img(src="images/birthday_1.jpg", alt="")
       .party__content
-        h2.section-square-title Yoga Birthday Party
-        p.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity for parents to understand more about the nature of their child
+        h2.party__title.section-square-title Yoga Birthday Party
+        p.party__text.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity for parents to understand more about the nature of their child
         a(href="#").primary-button.party__content-button Explore
-    section#adult.adult
-      .adult__content.big-section.section-square
-        .section-square-content
+    section#adult.adult.section-square
+      .adult__inner.section-square-content
+        .section-square-content-body
           h2.section-square-title Classes for Parents
           p.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity for parents to understand more about the nature of their child, with them to tune in
           a(href="#").primary-button.party__content-button All Classes
-      .adult__image.big-section.section-square-image
-        .adult__image-wrapper.image-cover
+      .adult__image.section-square-image
+        .adult__image-wrapper.section-square-image-body.image-cover
           img(src="images/woman_14.jpg", alt="")
-    section#retreat.retreat
-      .retreat__image.big-section.section-square-image
-          .retreat__image-wrapper.image-cover
+    section#retreat.retreat.section-square
+      .retreat__image.section-square-image
+          .retreat__image-wrapper.section-square-image-body.image-cover
             img(src="images/meditation_2.jpg", alt="")
-      .retreat__content.big-section.section-square
-        .section-square-content
+      .retreat__inner.section-square-content
+        .section-square-content-body
           h2.section-square-title Retreats
           p.section-square-text On Saturdays, we hold events for children and their parents that provide an opportunity
           a(href="#").primary-button.party__content-button Learn More
-    section#review.review.big-section
+    section#review.review
+      .review__circle-bg
       .review__content
         h2.section-title Our Customers Reviews
         .swiper.review__swiper
@@ -131,17 +136,15 @@ block content
                   .video__controls
                     .video__playpause.paused.image-contain
                       img(src="images/icon/play.svg", alt="")
-          .review__navigation-next
-            svg(width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-              path(d="M14.625 22.1455L3 12L14.625 1.85455C15.125 1.41818 15.125 0.727273 14.625 0.327273C14.125 -0.109091 13.3333 -0.109091 12.875 0.327273L0.375001 11.2364C0.125001 11.4545 3.57628e-07 11.7455 3.57628e-07 12C3.57628e-07 12.2545 0.125001 12.5455 0.375001 12.7636L12.875 23.6727C13.375 24.1091 14.1667 24.1091 14.625 23.6727C15.125 23.2364 15.125 22.5818 14.625 22.1455Z")
-          .review__navigation-prev
-            svg(width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-              path(d="M14.625 22.1455L3 12L14.625 1.85455C15.125 1.41818 15.125 0.727273 14.625 0.327273C14.125 -0.109091 13.3333 -0.109091 12.875 0.327273L0.375001 11.2364C0.125001 11.4545 3.57628e-07 11.7455 3.57628e-07 12C3.57628e-07 12.2545 0.125001 12.5455 0.375001 12.7636L12.875 23.6727C13.375 24.1091 14.1667 24.1091 14.625 23.6727C15.125 23.2364 15.125 22.5818 14.625 22.1455Z")
+        .swiper-pagination.review__pagination
     section#news-title.news-title.mid-section
-      .news-title__content  
-        h2.section-title News & Articles
-        p The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do
-        a(href="#").primary-button.party__content-button Go to Blog
+      .news-title__content
+        .animated-container
+          h2.section-title.animated-inner Blog
+        .animated-container
+          p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do
+        .animated-container
+          a(href="#").primary-button.party__content-button.animated-inner Go to Blog
     section#last-posts.last-posts
       ul.list-reset.last-posts__list
         li.last-posts__item
@@ -149,8 +152,10 @@ block content
           .last-posts__image.image-cover
             img(src="images/cooking_.jpg", alt="")
           .last-posts__content
-            h3 What good is yoga in hammocks? Who should do air yoga and what to expect from the lessons
-            p The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose.
+            .animated-container
+              h3.animated-inner What good is yoga in hammocks? Who should do air yoga and what to expect from the lessons
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose.
           .last-posts__button
             a(href="#") Read more
         li.last-posts__item
@@ -158,8 +163,10 @@ block content
           .last-posts__image.image-cover
             img(src="images/mother_daughter_1.jpg", alt="")
           .last-posts__content
-            h3 The philosophy of yoga nutrition for beginners: vegetarianism and why?
-            p The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
+            .animated-container
+              h3.animated-inner The philosophy of yoga nutrition for beginners: vegetarianism and why?
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
           .last-posts__button
             a(href="#") Read more
         li.last-posts__item
@@ -167,10 +174,15 @@ block content
           .last-posts__image.image-cover
             img(src="images/woman_6.png", alt="")
           .last-posts__content
-            h3 TWhat good is yoga in hammocks? Who should do air yoga and what to expect from the lessons air yoga and what
-            p The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
+            .animated-container
+              h3.animated-inner TWhat good is yoga in hammocks? Who should do air yoga and what to expect from the lessons air yoga and what
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
           .last-posts__button
             a(href="#") Read more
+    
+    
+    
 
 
 
@@ -180,3 +192,4 @@ block content
 
 
 
+  

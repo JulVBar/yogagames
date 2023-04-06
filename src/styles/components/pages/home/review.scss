@@ -1,46 +1,66 @@
 .review {
+  position: relative;
+  // overflow: hidden;
+  border-radius: $br $br 0 0;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  &__circle-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+    height: 1500px;
+    background: linear-gradient(90deg, #FFD5CC 3.3%, #FCDBF9 100%);
+    // background: linear-gradient(180deg, #FFD5CC 4.35%, #FCDBF9 33.9%, rgba(252, 219, 249, 0) 67.86%);
+    border-radius: 50%;
+    // transition: all 1s linear;
+    @include breakpoint($tablet) {
+      display: none;
+    }
+  }
   &__content {
+    position: relative;
+    z-index: 2;
     text-align: center;
+    margin-bottom: -5px;
     h2 {
-      padding-bottom: 50px;
+      padding: 50px 0;
+      @include breakpoint($tablet) {
+        padding-bottom: 30px;
+      }
+      @include breakpoint($mini-tablet) {
+        padding-bottom: 20px;
+      }
     }
   }
   &__swiper {
     position: relative;
+    cursor: url("./images/icon/Drag-cursor.svg"), auto;
   }
   &__slide {
-    height: 500px;
+    max-height: 500px;
+    @include breakpoint($tablet) {
+      max-height: 400px;
+    }
   }
   &__video {
-    width: 800px;
-    height: 500px;
+    max-width: 800px;
     margin: 0 auto;
-  }
-  &__navigation-next,
-  &__navigation-prev {
-    position: absolute;
-    z-index: 3;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    svg {
-      fill: $green;
-      width: 40px;
-      height: 60px;
-    }
-    
-  }
-  &__navigation-next {
-    right: 10%;
-    transform: translateY(-50%) rotate(180deg);
-    @include breakpoint(1400px) {
-      right: 0px;
+    @include breakpoint($tablet) {
+      max-width: 700px;
     }
   }
-  &__navigation-prev {
-    left: 10%;
-    @include breakpoint(1400px) {
-      left: 0px;
+  &__pagination {
+    bottom: -40px !important;
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      border-radius: 2px;
+      &-active {
+        background: $green;
+      }
     }
   }
 }
@@ -51,6 +71,4 @@
     cursor: not-allowed;
   }
 }
-
-
 

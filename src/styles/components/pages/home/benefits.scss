@@ -1,9 +1,17 @@
 .benefits {
   margin-bottom: $section-margin;
+  position: relative;
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include breakpoint($mini-tablet) {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
   }
   &__card {
     position: relative;
@@ -18,6 +26,14 @@
     &:nth-child(11),
     &:nth-child(12) {
       width: 49.45%;
+    }
+    @include breakpoint($tablet) {
+      width: 49.45%;
+    }
+    @include breakpoint($mini-tablet) {
+      flex: 0 0 80%;
+      margin-right: 20px;
+      scroll-snap-align: start;
     }
     &-header {
       width: 100%;
@@ -42,5 +58,31 @@
   &__button {
     display: block;
     width: 100%;
+    @include breakpoint($tablet) {
+      display: none;
+    }
+    @include breakpoint($mini-tablet) {
+      display: block;
+    }
+    &--circle {
+      position: absolute;
+      right: 30px;
+      left: 75%;
+      bottom: 30px;
+      margin: 0 -75px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      @include breakpoint($tablet) {
+        display: flex;
+      }
+      @include breakpoint($mini-tablet) {
+        display: none;
+      }
+    }
   }
 }

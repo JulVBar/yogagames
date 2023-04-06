@@ -2,18 +2,15 @@
   display: flex;
   justify-content: space-between;
   transition: all .5s ease-in-out;
-  &__content {
-    border: 2px solid $orange;
+  @include breakpoint($mini-tablet) {
     background: $orange;
   }
-  &__image {
-    overflow: hidden;
-    position: relative;
-    &-wrapper {
-      height: 100%;
-      position: absolute;
-      width: 110%;
-      height: 110%;
-    }
+  &__inner {
+    border: 2px solid $orange;
+    background: $orange;
+    transition: opacity 0.5s linear;
+  }
+  &__image-wrapper {
+    transition: transform 1.4s linear, opacity 0.5s linear;
   }
 }

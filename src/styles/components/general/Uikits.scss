@@ -41,6 +41,9 @@
   @include breakpoint($desktop) {
     padding: 50px;
   }
+  @include breakpoint($mini-tablet) {
+    padding: 30px;
+  }
 }
 .mid-section {
   padding: 50px 70px;
@@ -48,18 +51,17 @@
   background: $white;
   margin-bottom: $section-margin;
   @include breakpoint($desktop) {
-    padding: 30px 50px;
+    padding: 30px;
   }
 }
+
 .small-section {
-  padding: 20px 70px;
+  padding: 20px 30px;
   border-radius: $br;
   background: $white;
   margin-bottom: $section-margin;
-  @include breakpoint($desktop) {
-    padding: 20px 50px;
-  }
 }
+
 
 .section-title {
   font-size: $font-size-XXL;
@@ -67,38 +69,103 @@
   color: $black;
   font-weight: 400;
   line-height: 140%;
-}
-
-
-.section-square-title {
-  color: $white;
-  font-size: $font-size-XXL;
-  font-family: $font-family-title;
-  font-weight: 400;
-  max-width: 450px;
-}
-.section-square-text {
-  color: $white;
-  margin: 30px 0 50px 0;
-  max-width: 450px;
-}
-.section-square {
-  width: 49.45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: $br;
-  min-height: 35vw;
-  &-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  @include breakpoint($desktop) {
+    font-size: $font-size-XL;
+  }
+  @include breakpoint($mini-tablet) {
+    font-size: $font-size-L;
   }
 }
-.section-square-image {
-  width: 49.45%;
-  padding: 0;
-  overflow: hidden;
+
+
+
+.section-square {
+  display: flex;
+  border-radius: $br;
   min-height: 35vw;
+  margin-bottom: $section-margin;
+  @include breakpoint($mini-tablet) {
+    width: 100%;
+    min-height: 1vw;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-content {
+    width: 49.45%;
+    border-radius: $br;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    @include breakpoint($desktop) {
+      padding: 50px;
+    }
+    @include breakpoint($mini-tablet) {
+      padding: 0px;
+      width: 100%;
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include breakpoint($mini-tablet) {
+        align-items: center;
+      }
+    }
+  }
+  &-image {
+    width: 49.45%;
+    padding: 0;
+    overflow: hidden;
+    border-radius: $br;
+    &-body {
+      width: 100%;
+      height: 100%;
+    }
+    @include breakpoint($mini-tablet) {
+      margin-bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      min-height: 1vw;
+    }
+  }
+  &-title {
+    color: $white;
+    font-size: $font-size-XXL;
+    font-family: $font-family-title;
+    font-weight: 400;
+    max-width: 450px;
+    @include breakpoint($desktop) {
+      font-size: $font-size-XL;
+    }
+    @include breakpoint($tablet) {
+      font-size: $font-size-L;
+    }
+  }
+  &-text {
+    color: $white;
+    margin: 30px 0 50px 0;
+    max-width: 450px;
+    @include breakpoint($tablet) {
+      margin: 20px 0 30px 0;
+      max-width: 320px;
+    }
+    @include breakpoint($mini-tablet) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.animated {
+  &-container {
+    overflow: hidden;
+  }
+  &-inner {
+    transition: all .5s linear;
+  }
 }

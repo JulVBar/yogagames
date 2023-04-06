@@ -1,19 +1,17 @@
 .adult {
   display: flex;
   justify-content: space-between;
-  transition: all .5s ease-in-out;
-  &__content {
-    border: 2px solid $purple-dark;
+  
+  @include breakpoint($mini-tablet) {
+    flex-direction: column-reverse;
     background: $purple-dark;
   }
-  &__image {
-    overflow: hidden;
-    position: relative;
-    &-wrapper {
-      height: 100%;
-      position: absolute;
-      width: 110%;
-      height: 110%;
-    }
+  &__inner {
+    border: 2px solid $purple-dark;
+    background: $purple-dark;
+    transition: opacity 0.5s linear;
+  }
+  &__image-wrapper {
+    transition: transform 1.4s linear, opacity 0.5s linear;
   }
 }

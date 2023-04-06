@@ -21,6 +21,12 @@
     background: $gradient;
     border: 5px solid $white;
     border-radius: 50%;
+    @include breakpoint($tablet) {
+      width: 50px;
+      height: 50px;
+      margin: -25px;
+      border: 2px solid $white;
+    }
     img {
       width: 30px;
       height: 30px;
@@ -30,6 +36,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @include breakpoint($tablet) {
+        width: 15px;
+        height: 15px;
+        padding-left: 4px;
+      }
     }
     &:after {
       content: '';
@@ -42,6 +53,11 @@
       margin: -50px;
       border: 1px solid $white;
       border-radius: 50%;
+      @include breakpoint($tablet) {
+        width: 50px;
+        height: 50px;
+        margin: -25px;
+      }
     }
     &:before {
       content: '';
@@ -54,6 +70,11 @@
       margin: -50px;
       border: 1px solid $white;
       border-radius: 50%;
+      @include breakpoint($tablet) {
+        width: 50px;
+        height: 50px;
+        margin: -25px;
+      }
     }
     &.paused {
       opacity: 1;

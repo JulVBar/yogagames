@@ -7,6 +7,7 @@ $gray:#F5F5F5;
 $gray-2:#fcfbfa;
 $gray-dark:#92949A;
 $green: #D2F179;
+// $green: #fffe54;
 $red: #F84F39;
 $yellow: #FFC940;
 $purple: #B797D7;
@@ -19,6 +20,7 @@ $gradient: linear-gradient(90deg, $yellow 3.25%, $pink 35.3%, $purple 62.01%, $b
 
 $br: 50px;
 $page-padding: 5vw;
+$page-padding-S: 1vw;
 $section-margin: 20px;
 
 //font size
@@ -38,7 +40,7 @@ $z-index-header:  1000;
 $header-height: 100px;
 
 //media
-$desktop: 1280px; 
+$desktop: 1200px; 
 $tablet: 1024px; 
 $mini-tablet: 768px; 
 $mobile: 480px; 

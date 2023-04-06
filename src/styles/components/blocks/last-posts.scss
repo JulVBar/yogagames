@@ -5,6 +5,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    @include breakpoint($tablet) {
+      flex-direction: row;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
   }
   &__item {
     display: flex;
@@ -13,23 +21,48 @@
     background: $white;
     &:not(:last-child) {
       margin-bottom: 20px;
-    }
-    &:hover {
-      .last-posts__image img {
-        transform: scale(1.2);
+      @include breakpoint($tablet) {
+        margin-bottom: 0px;
+        margin-right: 20px;
       }
+    }
+    @include breakpoint($tablet) {
+      flex: 0 0 350px;
+      scroll-snap-align: start;
+
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+    @include breakpoint($mini-mobile) {
+      flex: 0 0 320px;
     }
   }
   &__date {
     padding-top: 50px;
     padding-left: 70px;
     color: $gray-dark;
+    @include breakpoint($desktop) {
+      padding-top: 30px;
+      padding-left: 30px;
+    }
+    @include breakpoint($tablet) {
+      padding: 0;
+      margin-bottom: 20px;
+    }
   }
   &__image {
     height: 270px;
     width: 25vw;
     border-radius: $br;
     overflow: hidden;
+    @include breakpoint($desktop) {
+      width: 30vw;
+    }
+    @include breakpoint($tablet) {
+      height: 150px;
+      width: 100%;
+    }
     img {
       transition: all 1s linear;
     }
@@ -37,6 +70,15 @@
   &__content {
     width: 25vw;
     padding-top: 50px;
+    @include breakpoint($desktop) {
+      padding-top: 30px;
+      width: 30vw;
+    }
+    @include breakpoint($tablet) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+    }
     h3 {
       font-size: $font-size-M;
       margin-bottom: 20px;
@@ -45,6 +87,13 @@
   &__button {
     padding-top: 50px;
     padding-right: 70px;
+    @include breakpoint($desktop) {
+      padding-top: 30px;
+      padding-right: 30px;
+    }
+    @include breakpoint($tablet) {
+      padding: 0;
+    }
     a {
       color: $purple-dark;
       position: relative;

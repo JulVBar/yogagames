@@ -1,0 +1,22 @@
+form.form(action="#")
+  .form__control
+    input(id="formName" type="text" name="name" required placeholder=" ")
+    label(id="formName") Name
+    span.form__control-error The name must be less then 150 symbols
+    span.form__control-error-req Have to fill
+  .form__control
+    input(id="formTel" type="text" name="phone" required placeholder=" " pattern="/^[\d\+][\d\(\)\ -]{4,16}\d$/i")
+    label(id="formTel") Phone
+    span.form__control-error ошибка телефон
+    span.form__control-error-req Have to fill
+  .form__control
+    input(id="formEmail" type="text" name="email" placeholder=" " pattern="/^[\w\.]+@[\w-]+\.[a-z]{2,4}$/i")
+    label(id="formEmail") Email
+    span.form__control-error ошибка mail
+    span.form__control-error-req Have to fill
+  .form__control
+    textarea#formMessage(name='message' maxlength="300" placeholder=" ")
+    label.textarea-label(id="formMessage") Message
+    span.form__control-error The name must be less then 300 symbols
+  .form__button
+    button.primary-button(type="submit") Send Request

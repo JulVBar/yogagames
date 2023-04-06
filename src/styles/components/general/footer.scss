@@ -2,11 +2,27 @@
   &__body {
     display: flex;
     justify-content: space-between;
+    @include breakpoint($mini-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__block {
     display: flex;
     flex-direction: column;
     min-width: 250px;
+    @include breakpoint($desktop) {
+      min-width: auto;
+    }
+    @include breakpoint($mini-tablet) {
+      align-items: center;
+      text-align: center;
+    }
+    &:not(:last-child) {
+      @include breakpoint($mini-tablet) {
+        margin-bottom: 30px;
+      }
+    }
     &-title {
       color: $black;
       font-weight: 700;
@@ -16,6 +32,11 @@
   &__logo {
     width: 130px;
     height: 105px;
+    @include breakpoint($tablet) {
+      width: 70px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
   }
   nav ul li {
     &:not(:last-child) {
@@ -65,9 +86,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include breakpoint($mini-tablet) {
+        flex-direction: column;
+      }
     }
     li:not(:last-child) {
       margin-right: 30px;
+      @include breakpoint($mini-tablet) {
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
     }
     a {
       color: $gray-dark;

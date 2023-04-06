@@ -1,0 +1,83 @@
+
+$left-indent: 30px;
+
+.form {
+  &__control {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  input {
+    border: 2px solid $green;
+    height: 60px;
+    min-width: 320px;
+    max-width: 560px;
+    width: 100%;
+    border-radius: $br;
+    padding-left: 30px;
+    outline: none;
+    background: $white;
+    &:focus ~ label {
+      top: -15px;
+      font-size: 14px;
+      color: $green;
+    }
+    &:not(:placeholder-shown) ~ label {
+      top: -15px;
+      font-size: 14px;
+    }
+    @include breakpoint($tablet) {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  textarea {
+    overflow: auto;
+    border: 2px solid $green;
+    border-radius: 20px;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    width: 100%;
+    outline: none;
+    padding: 30px;
+    &:focus ~ label {
+      top: -15px;
+      font-size: 14px;
+      color: $green;
+    }
+    &:not(:placeholder-shown) ~ label {
+      top: -15px;
+      font-size: 14px;
+    }
+  }
+  label {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 30px;
+    color: $gray-dark;
+    transform: translateY(-50%);
+    transition: all .2s linear;
+    pointer-events: none;
+  }
+  .textarea-label {
+    top: 30px;
+    left: 30px;
+  }
+  &__control-error,
+  &__control-error-req {
+    display: none;
+    font-size: 14px;
+    color: crimson;
+    padding-left: 30px;
+    &.show {
+      display: block;
+    }
+  }
+  &__button {
+    width: 100%;
+    text-align: center;
+  }
+}
+

@@ -1,7 +1,6 @@
 function main() {
 
     // hover animation on main navigation
-
     const headerLinks = document.querySelectorAll('.header__nav li');
     if (headerLinks && headerLinks?.length > 0) {
         headerLinks.forEach(li => {
@@ -13,7 +12,6 @@ function main() {
 
 
     // fixed header bottom
-
     const fixedHeader = document.querySelector('.header__bottom');
     function showHeader() {
         if (window.pageYOffset !== 0) {
@@ -28,7 +26,6 @@ function main() {
 
 
     // hover animation on sub navigation
-
     const headerSubLinksFirst = document.querySelectorAll('.nav li ul li:nth-child(3n+1)');
     if (headerSubLinksFirst && headerSubLinksFirst?.length > 0) {
         headerSubLinksFirst.forEach(li => {
@@ -233,23 +230,21 @@ function main() {
 
 
     //Paralax images
+    // function parallaxImage(parentClass, imageClass) {
+    //     let image = document.querySelector(imageClass);
+    //     let parent = document.querySelector(parentClass);
 
-    function parallaxImage(parentClass, imageClass) {
-        let image = document.querySelector(imageClass);
-        let parent = document.querySelector(parentClass);
+    //     if (image && parent) {
+    //         window.addEventListener('mousemove', function(e) { 
+    //             let x = e.clientX / window.innerWidth;
+    //             let y = e.clientY / window.innerHeight;
+    //             image.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
+    //         });
+    //     }
+    // }
 
-        if (image && parent) {
-            window.addEventListener('mousemove', function(e) { 
-                let x = e.clientX / window.innerWidth;
-                let y = e.clientY / window.innerHeight;
-                image.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)';
-            });
-        }
-    }
-    
-    
-    parallaxImage('.adult', '.adult__image-wrapper img');
-    parallaxImage('.retreat', '.retreat__image-wrapper');
+
 }
+
 
 export default main;
