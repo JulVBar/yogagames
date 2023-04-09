@@ -81,6 +81,7 @@
 
 .page-title {
   overflow: hidden;
+  margin-bottom: 50px;
   h1 {
     display: inline-flex;
     font-family: $font-family-title;
@@ -98,7 +99,9 @@
       @include animation-text-slide-up(0.5s, 0s);
     }
   }
-  
+  @include breakpoint($mini-tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 

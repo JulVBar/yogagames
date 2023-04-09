@@ -1,0 +1,76 @@
+extends ../layout/main
+
+block main-vars
+  - var title = 'Page title';
+  - var description = 'Description';
+  - var keywords = 'Description';
+  - var bodyClass = 'body';
+  - var pageClass = 'page__shedule';
+
+
+block content
+  .container
+    +pageTitle('SHEDULE')
+    section.shedule
+      ul.list-reset.shedule__list
+        li.shedule__item
+          .shedule__item-block.shedule__item-image.image-cover
+            img(src="images/kids_4.jpg", alt="")
+          .shedule__item-block.shedule__item-description
+            .shedule__item-info 
+              p.shedule__item-name Yoga for Kids
+              p.shedule__item-duration 1 hour
+            a(href="program.html").shedule__item-button.secondary-button Learn More
+          .shedule__item-block.shedule__item-shedule
+            p Tuesday — 5:00 pm
+            p Friyday — 5:00 pm
+            p Saturday — 11:00 am
+            a(href="program.html").shedule__item-button-mobile.secondary-button Learn More
+        li.shedule__item
+          .shedule__item-block.shedule__item-image.image-cover
+            img(src="images/group_2.jpg", alt="")
+          .shedule__item-block.shedule__item-description
+            .shedule__item-info 
+              p.shedule__item-name Yoga Relax Group
+              p.shedule__item-duration 1,5 hour
+            a(href="adults.html").shedule__item-button.secondary-button Learn More
+          .shedule__item-block.shedule__item-shedule
+            p Tuesday — 6:30 pm
+            p Thursday — 6:30 pm
+            a(href="adults.html").shedule__item-button-mobile.secondary-button Learn More
+        li.shedule__item
+          .shedule__item-block.shedule__item-image.image-cover
+            img(src="images/bowl_3.jpg", alt="")
+          .shedule__item-block.shedule__item-description
+            .shedule__item-info 
+              p.shedule__item-name Sonic meditation with Tibetan bowls
+              p.shedule__item-duration 30 min
+            a(href="adults.html").shedule__item-button.secondary-button Learn More
+          .shedule__item-block.shedule__item-shedule
+            p or time by afreement
+            a(href="adults.html").shedule__item-button-mobile.secondary-button Learn More
+        li.shedule__item
+          .shedule__item-block.shedule__item-image.image-cover
+            img(src="images/woman_1.jpg", alt="")
+          .shedule__item-block.shedule__item-description
+            .shedule__item-info 
+              p.shedule__item-name Yoga Nidra Meditation
+              p.shedule__item-duration 45 min
+            a(href="adults.html").shedule__item-button.secondary-button Learn More
+          .shedule__item-block.shedule__item-shedule
+            p Friyday — 6:30 pm
+            a(href="adults.html").shedule__item-button-mobile.secondary-button Learn More
+        li.shedule__item
+          .shedule__item-block.shedule__item-image.image-cover
+            img(src="images/birthday_3.jpg", alt="")
+          .shedule__item-block.shedule__item-description
+            .shedule__item-info 
+              p.shedule__item-name Yoga Birthday Party
+              p.shedule__item-duration 2-4 hour
+            a(href="events.html").shedule__item-button.secondary-button Learn More
+          .shedule__item-block.shedule__item-shedule
+            p Saturday — 11:00 am
+            p or time by afreement
+            a(href="events.html").shedule__item-button-mobile.secondary-button Learn More
+
+

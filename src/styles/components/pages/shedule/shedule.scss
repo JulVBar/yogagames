@@ -1,0 +1,98 @@
+.page__shedule {
+  text-align: center;
+}
+
+.shedule {
+  margin-bottom: 20px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-radius: $br;
+    background: $white;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &.start-animation {
+      @include animation-fade-in(0.5s);
+    }
+    @include breakpoint($mini-tablet) {
+      flex-direction: column;
+      padding: 30px;
+    }
+    &-block {
+      width: 30%;
+      height: 300px;
+      @include breakpoint($tablet) {
+        width: 50%;
+        height: auto;
+      }
+      @include breakpoint($mini-tablet) {
+        width: 100%;
+      }
+    }
+    &-image {
+      border-radius: $br;
+      overflow: hidden;
+      @include breakpoint($tablet) {
+        display: none;
+      }
+    }
+    &-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 50px;
+      @include breakpoint($desktop) {
+        padding: 30px;
+      }
+      @include breakpoint($mini-tablet) {
+        padding: 0px;
+      }
+    }
+    &-name {
+      font-weight: 700;
+      font-size: $font-size-XL;
+      color: $black;
+      margin-bottom: 20px;
+      line-height: 140%;
+      @include breakpoint($desktop) {
+        font-size: $font-size-L;
+      }
+    }
+    &-duration {
+      color: $gray-dark;
+      @include breakpoint($tablet) {
+        margin-bottom: 20px;
+      }
+    }
+    &-button {
+      min-width: 100%;
+      @include breakpoint($mini-tablet) {
+        display: none;
+      }
+      &-mobile {
+        display: none;
+        @include breakpoint($mini-tablet) {
+          display: block;
+          margin-top: 20px;
+        }
+      }
+    }
+    &-shedule {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint($desktop) {
+        padding: 30px;
+      }
+      @include breakpoint($mini-tablet) {
+        padding: 0px;
+      }
+      p {
+        line-height: 200%;
+      }
+    }
+  }
+}

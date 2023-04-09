@@ -21,6 +21,14 @@ function preloader() {
                         listItems[i].classList.add('start-animation');
                     }
                 }
+
+                const sheduleItems = document.querySelectorAll('.shedule__item');
+                if (sheduleItems?.length > 0) {
+                    for (let i = 0; i < sheduleItems.length; i++) {
+                        sheduleItems[i].style.animationDelay = i/3 + 's';
+                        sheduleItems[i].classList.add('start-animation');
+                    }
+                }
             }
         }, 0);
     };

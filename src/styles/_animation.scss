@@ -10,10 +10,9 @@
     }
 }
 
-@mixin animation-fade-in ($duration, $delay) {
+@mixin animation-fade-in ($duration) {
     opacity: 0;
     animation: fadeIn $duration ease-in-out forwards;
-    animation-delay: $delay;
 }
 
 
@@ -97,10 +96,9 @@
     }
 }
 
-@mixin animation-scale-out ($delay) {
+@mixin animation-scale-out ($duration) {
     opacity: 0;
-    animation: scale-out 0.5s ease-out forwards;
-    animation-delay: $delay;
+    animation: scale-out $duration ease-out forwards;
 }
 
 @keyframes list {
