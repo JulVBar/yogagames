@@ -10,6 +10,20 @@ function main() {
         })
     }
 
+    
+    // Active nav link
+    (function() {
+        [...this.querySelectorAll(".header__nav li a")]
+          .filter(a => this.URL.startsWith(a.href))
+          .forEach(a => a.classList.add("active"));
+      }.bind(window.document)());
+
+      (function() {
+        [...this.querySelectorAll(".burger__menu-nav li a")]
+          .filter(a => this.URL.startsWith(a.href))
+          .forEach(a => a.classList.add("active"));
+      }.bind(window.document)());
+
 
     // fixed header bottom
     const fixedHeader = document.querySelector('.header__bottom');
@@ -23,8 +37,7 @@ function main() {
     if (fixedHeader) {
         window.addEventListener('scroll', showHeader);
     }
-
-
+    
     // hover animation on sub navigation
     const headerSubLinksFirst = document.querySelectorAll('.nav li ul li:nth-child(3n+1)');
     if (headerSubLinksFirst && headerSubLinksFirst?.length > 0) {
@@ -227,6 +240,19 @@ function main() {
             li.append(div)
         })
     }
+
+   
+
+    
+    
+
+
+
+
+
+
+
+
 
 
     //Paralax images

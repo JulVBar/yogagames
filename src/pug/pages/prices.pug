@@ -1,0 +1,178 @@
+extends ../layout/main
+
+block main-vars
+  - var title = 'Page title';
+  - var description = 'Description';
+  - var keywords = 'Description';
+  - var bodyClass = 'body';
+  - var pageClass = 'page__prices hasListAnimation';
+
+
+block content
+  .container
+    +pageTitle('PRICES')
+    section#kids-prices.kids-prices
+      h2.section-title.prices__title(data-list) Classes for Kids
+      ul.list-reset.price__list
+        li.price__item(style="background: " data-list)
+          .price__item-block
+            span.price__item-block-amount 1
+            span.price__item-block-name session in group
+          .price__item-block
+            span.price__item-block-price 10 €
+            span.price__item-block-per-month 10€/session 
+          .price__item-block
+            span.price__item-block-duration 1 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: " data-list)
+          .price__item-block
+            span.price__item-block-amount 4
+            span.price__item-block-name sessions in group per month
+          .price__item-block
+            span.price__item-block-price 35 €
+            span.price__item-block-per-month 8.75€/session 
+          .price__item-block
+            span.price__item-block-duration 1 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: " data-list)
+          .price__item-block
+            span.price__item-block-amount 8
+            span.price__item-block-name sessions in group per month
+          .price__item-block
+            span.price__item-block-price 40 €
+            span.price__item-block-per-month 8€/session 
+          .price__item-block
+            span.price__item-block-duration 1 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: #FFEFF4" data-list)
+          .price__item-block
+            span.price__item-block-name Personal Session
+          .price__item-block
+            span.price__item-block-price 25 €
+          .price__item-block
+            span.price__item-block-duration 1,5 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+      a(href="#" target="blank" data-list).prices__button.primary-button Register For Class
+      p.prices__attention(data-list) Attention! Season tickets must be used within a month. Classes that have not been completed are not transferred and money is not returned
+    section#adult-prices.adult-prices
+      h2.section-title.prices__title(data-list) Yoga Relax for Parents
+      ul.list-reset.price__list
+        li.price__item(style="background: " data-list)
+          .price__item-block
+            span.price__item-block-amount 1
+            span.price__item-block-name session in group
+          .price__item-block
+            span.price__item-block-price 10 €
+            span.price__item-block-per-month 10€/session 
+          .price__item-block
+            span.price__item-block-duration 1 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: " data-list)
+          .price__item-block
+            span.price__item-block-amount 4
+            span.price__item-block-name sessions in group per month
+          .price__item-block
+            span.price__item-block-price 35 €
+            span.price__item-block-per-month 8.75€/session 
+          .price__item-block
+            span.price__item-block-duration 1 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: " data-list)
+          .price__item-block
+            span.price__item-block-amount 8
+            span.price__item-block-name sessions in group per month
+          .price__item-block
+            span.price__item-block-price 40 €
+            span.price__item-block-per-month 8€/session 
+          .price__item-block
+            span.price__item-block-duration 1 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: #FFEFF4" data-list)
+          .price__item-block
+            span.price__item-block-name Personal Session
+          .price__item-block
+            span.price__item-block-price 25 €
+          .price__item-block
+            span.price__item-block-duration 1,5 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+        li.price__item(style="background: #EDECFA" data-list)
+          .price__item-block
+            span.price__item-block-name Personal Session
+          .price__item-block
+            span.price__item-block-price 25 €
+          .price__item-block
+            span.price__item-block-duration 1,5 hour
+          a(href="#" target="blank" data-list).prices__button-mobile.secondary-button Register For Class
+      a(href="#" target="blank" data-list).prices__button.primary-button Register For Class
+      p.prices__attention(data-list) Attention! Season tickets must be used within a month. Classes that have not been completed are not transferred and money is not returned
+    section#event.event-prices
+      h2.section-title.prices__title Yoga Birthday Party
+      ul.list-reset.event-prices__list
+        li.event-prices__item
+          .event-prices__item-header
+            .event-prices__item-icon.image-contain
+              img(src="images/icon/pirate.png", alt="")
+            .event-prices__item-title Pirate Birthday Party
+            .event-prices__item-type Yoga quest
+          ul.list-reset.event-prices__item-body
+            li.event-prices__item-list
+              .event-prices__item-caption Duration
+              .event-prices__item-info 2 hours
+            li.event-prices__item-list
+              .event-prices__item-caption Age
+              .event-prices__item-info 4+
+            li.event-prices__item-list
+              .event-prices__item-caption 8 kids group
+              .event-prices__item-info 120 €
+            li.event-prices__item-list
+              .event-prices__item-caption +1 more kid
+              .event-prices__item-info 15 €
+            li.event-prices__item-list
+              .event-prices__item-caption Max kids
+              .event-prices__item-info 14
+        li.event-prices__item
+          .event-prices__item-header
+            .event-prices__item-icon.image-contain
+              img(src="images/icon/tropical-fruit.png", alt="")
+            .event-prices__item-title Vegetarian Cooking
+            .event-prices__item-type Workshop
+          ul.list-reset.event-prices__item-body
+            li.event-prices__item-list
+              .event-prices__item-caption Duration
+              .event-prices__item-info 2 hours
+            li.event-prices__item-list
+              .event-prices__item-caption Age
+              .event-prices__item-info 4+
+            li.event-prices__item-list
+              .event-prices__item-caption 8 kids group
+              .event-prices__item-info 200 €
+            li.event-prices__item-list
+              .event-prices__item-caption +1 more kid
+              .event-prices__item-info 25 €
+            li.event-prices__item-list
+              .event-prices__item-caption Max kids
+              .event-prices__item-info 10
+        li.event-prices__item
+          .event-prices__item-header
+            .event-prices__item-icon.image-contain
+              img(src="images/icon/angel.png", alt="")
+            .event-prices__item-title Angel Drawing
+            .event-prices__item-type Workshop
+          ul.list-reset.event-prices__item-body
+            li.event-prices__item-list
+              .event-prices__item-caption Duration
+              .event-prices__item-info 3 hours
+            li.event-prices__item-list
+              .event-prices__item-caption Age
+              .event-prices__item-info 6+
+            li.event-prices__item-list
+              .event-prices__item-caption 8 kids group
+              .event-prices__item-info 320 €
+            li.event-prices__item-list
+              .event-prices__item-caption +1 more kid
+              .event-prices__item-info 40 €
+            li.event-prices__item-list
+              .event-prices__item-caption Max kids
+              .event-prices__item-info 10
+      a(href="#" target="blank").prices__button-event.primary-button Party Request
+      a(href="#" target="blank").prices__button-event.secondary-button About Birthday Parties

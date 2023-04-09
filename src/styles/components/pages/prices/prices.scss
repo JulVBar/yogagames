@@ -1,0 +1,192 @@
+.page__prices {
+  text-align: center;
+}
+.prices {
+  &__button {
+    width: 100%;
+    margin-bottom: 20px;
+    @include breakpoint($mini-tablet) {
+      display: none;
+    }
+    &-mobile {
+      display: none;
+      @include breakpoint($mini-tablet) {
+        display: block;
+      }
+    }
+    &-event {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &__attention {
+    font-size: 14px;
+    @include breakpoint($tablet) {
+      padding: 0 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+.kids-prices,
+.adult-prices {
+  margin-bottom: 50px;
+}
+
+.price {
+  &__list {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: $white;
+    border-radius: $br;
+    padding: 20px 70px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    @include breakpoint($tablet) {
+      padding: 20px 30px;
+    }
+    @include breakpoint($mini-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-block {
+      color: $black;
+      width: 220px;
+      text-align: left;
+      display: flex;
+      flex-wrap: nowrap;
+      &:nth-child(1) {
+        width: 45%;
+        @include breakpoint($mini-tablet) {
+          width: auto;
+        }
+      }
+      &:nth-child(2) {
+        width: 40%;
+        @include breakpoint($tablet) {
+          flex-direction: column;
+        }
+        @include breakpoint($mini-tablet) {
+          flex-direction: row;
+          width: auto;
+        }
+      }
+      &:nth-child(3) {
+        width: 10%;
+        @include breakpoint($mini-tablet) {
+          width: auto;
+        }
+      }
+      &:not(:last-child) {
+        @include breakpoint($mini-tablet) {
+          margin-bottom: 20px;
+        }
+      }
+      span {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+      &-amount {
+        font-size: $font-size-L;
+        font-weight: 700;
+      }
+      &-name {
+        @include breakpoint($tablet) {
+          width: 180px;
+        }
+        @include breakpoint($mini-tablet) {
+          width: auto;
+        }
+      }
+      &-price {
+        font-size: $font-size-L;
+        font-weight: 700;
+      }
+      &-per-month {
+        color: $gray-dark;
+      }
+      &-duration {
+        
+      }
+    }
+  }
+}
+
+.event-prices {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint($tablet) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32.5%;
+    background: $white;
+    border-radius:$br;
+    margin-bottom: 20px;
+    @include breakpoint($tablet) {
+      padding: 30px;
+    }
+    @include breakpoint($tablet) {
+      width: 100%;
+    }
+    &-header {
+      margin-bottom: 30px;
+    }
+    &-icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &-title{
+      font-weight: 700;
+      color: $black;
+      margin-bottom: 5px;
+    }
+    &-type {
+      color: $gray-dark;
+    }
+    &-body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-list {
+      display: flex;
+      justify-content: left;
+      text-align: left;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &-caption {
+      width: 200px;
+      @include breakpoint($tablet) {
+        width: 150px;
+      }
+    }
+    &-info {
+      width: 70px;
+      text-align: left;
+      font-weight: 700;
+    }
+  }
+  
+}
