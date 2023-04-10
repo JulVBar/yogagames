@@ -18,6 +18,7 @@
     @include breakpoint($mini-tablet) {
       flex-direction: column;
       padding: 30px;
+      align-items: center;
     }
     &-block {
       width: 30%;
