@@ -58,31 +58,5 @@
   &__button {
     display: block;
     width: 100%;
-    @include breakpoint($tablet) {
-      display: none;
-    }
-    @include breakpoint($mini-tablet) {
-      display: block;
-    }
-    &--circle {
-      position: absolute;
-      right: 30px;
-      left: 75%;
-      bottom: 30px;
-      margin: 0 -75px;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      display: none;
-      @include breakpoint($tablet) {
-        display: flex;
-      }
-      @include breakpoint($mini-tablet) {
-        display: none;
-      }
-    }
   }
 }

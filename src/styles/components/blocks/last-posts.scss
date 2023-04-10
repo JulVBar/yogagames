@@ -34,8 +34,9 @@
       align-items: center;
       padding: 30px;
     }
-    @include breakpoint($mini-mobile) {
-      flex: 0 0 320px;
+    @include breakpoint($mobile) {
+      flex: 0 0 80%;
+      padding: 20px;
     }
   }
   &__date {
@@ -50,6 +51,9 @@
       padding: 0;
       margin-bottom: 20px;
     }
+    @include breakpoint($mobile) {
+      margin-bottom: 10px;
+    }
   }
   &__image {
     height: 270px;
@@ -60,11 +64,11 @@
       width: 30vw;
     }
     @include breakpoint($tablet) {
-      height: 150px;
+      height: 120px;
       width: 100%;
     }
-    img {
-      transition: all 1s linear;
+    @include breakpoint($mobile) {
+      border-radius: 20px;
     }
   }
   &__content {

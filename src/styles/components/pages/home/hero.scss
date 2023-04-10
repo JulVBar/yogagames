@@ -32,8 +32,8 @@
       height: 200px;
     }
     @include breakpoint($mobile) {
-      width: 350px;
-      height: 140px;
+      width: 100vw;
+      height: 40vw;
       margin-bottom: 20px;
     }
     &-bg {
