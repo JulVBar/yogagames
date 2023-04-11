@@ -13,9 +13,7 @@
     width: 1500px;
     height: 1500px;
     background: linear-gradient(90deg, #FFD5CC 3.3%, #FCDBF9 100%);
-    // background: linear-gradient(180deg, #FFD5CC 4.35%, #FCDBF9 33.9%, rgba(252, 219, 249, 0) 67.86%);
     border-radius: 50%;
-    // transition: all 1s linear;
     @include breakpoint($tablet) {
       display: none;
     }
