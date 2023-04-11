@@ -6,23 +6,23 @@
   margin: 0 auto;
   position: relative;
   cursor: pointer;
-  iframe,
-  video {
-    width: 800px;
-    height: 450px;
-  }
   @include breakpoint($tablet) {
     width: 600px;
     height: 330px;
-    video {
-      width: 600px;
-      height: 330px;
-    }
   }
   @include breakpoint($mini-tablet) {
     width: 90%;
     height: 300px;
-    video {
+  }
+  iframe,
+  video {
+    width: 800px;
+    height: 450px;
+    @include breakpoint($tablet) {
+      width: 600px;
+      height: 330px;
+    }
+    @include breakpoint($mini-tablet) {
       width: 90%;
       height: 300px;
     }
