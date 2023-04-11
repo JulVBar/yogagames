@@ -7,33 +7,34 @@ function videoSlider() {
     },
   });
 
-  const videos = document.querySelectorAll('.video');
+  const videoWrappers = document.querySelectorAll('.video');
 
-  videos?.forEach(video => {
-    videoPlayer(video);
+  videoWrappers?.forEach(videoWrapper => {
+    videoPlayer(videoWrapper);
   });
 
-  function videoPlayer(video) {
-    let movie = video.querySelector('video');
-    let playBtn = video.querySelector('.video__playpause');
+  function videoPlayer(videoWrapper) {
+    let playBtn = videoWrapper.querySelector('.video-playpause');
+    let video = videoWrapper.querySelector('video');
 
-    video.addEventListener('click', () => {
-      playBtn.classList.contains('paused') ? movie.pause() : movie.play();
-      playBtn.classList.toggle('paused');
-    })
-
-    video.addEventListener('mouseover', () => {
-      movie.setAttribute('controls', '')
-    })
-    video.addEventListener('mouseout', () => {
-      movie.removeAttribute('controls')
+    video.addEventListener('click', (e) => {
+      // if (e.target === video) {
+      //   playBtn.classList.toggle('hide');
+      // }
+      if (playBtn && video) {
+        video.paused ? playBtn.classList.add('hide') : playBtn.classList.remove('hide');
+      }
     })
   }
 
   reviewSwiper.on('slideChange', function () {
-    videos.forEach(video => {
-      video.querySelector('video').pause();
-      video.querySelector('.video__playpause').classList.add('paused');
+    videoWrappers.forEach(videoWrapper => {
+      let video = videoWrapper.querySelector('video');
+      let playBtn = videoWrapper.querySelector('.video-playpause');
+      video.pause();
+      if (playBtn && video) {
+        video.paused ? playBtn.classList.remove('hide') : playBtn.classList.add('hide');
+      }
     })
   });
 }

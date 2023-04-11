@@ -14,7 +14,11 @@
     align-items: center;
     justify-content: right;
     transition: all .5s linear;
+    @include breakpoint($desktop) {
+      padding-right: 50px;
+    }
     @include breakpoint($mini-tablet) {
+      padding-right: 0px;
       width: 100%;
       justify-content: center;
       margin-bottom: 20px;
@@ -37,15 +41,6 @@
         width: 200px;
         height: 200px;
       }
-    }
-    @include breakpoint($desktop) {
-      padding-right: 50px;
-    }
-    @include breakpoint($tablet) {
-      padding-right: 70px;
-    }
-    @include breakpoint($mini-tablet) {
-      padding-right: 0px;
     }
   }
   &__content {

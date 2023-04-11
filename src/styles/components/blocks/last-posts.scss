@@ -1,6 +1,18 @@
 .last-posts {
   background: transparent;
   margin-bottom: 20px;
+  position: relative;
+  &-mobiledrag {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: $gray-dark;
+    @include breakpoint($mobile) {
+      display: flex;
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -35,7 +47,7 @@
       padding: 30px;
     }
     @include breakpoint($mobile) {
-      flex: 0 0 80%;
+      flex: 0 0 100%;
       padding: 20px;
     }
   }

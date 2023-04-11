@@ -45,13 +45,6 @@
       max-height: 400px;
     }
   }
-  &__video {
-    max-width: 800px;
-    margin: 0 auto;
-    @include breakpoint($tablet) {
-      max-width: 700px;
-    }
-  }
   &__pagination {
     bottom: -40px !important;
     .swiper-pagination-bullet {
