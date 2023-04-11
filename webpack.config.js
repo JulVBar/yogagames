@@ -30,7 +30,7 @@ const optimization = () => {
     if (isProd) {
         config.minimizer = [
             new TerserPlugin(),
-            new CssMqpackerPlugin() //объединяет медиа-запросы
+            // new CssMqpackerPlugin() //объединяет медиа-запросы
         ];
     }
 
