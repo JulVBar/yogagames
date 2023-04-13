@@ -44,6 +44,7 @@
     padding: 50px;
   }
   @include breakpoint($mini-tablet) {
+    border-radius: $br-S;
     padding: 30px;
   }
 }
@@ -55,12 +56,18 @@
   @include breakpoint($desktop) {
     padding: 30px;
   }
+  @include breakpoint($mini-tablet) {
+    border-radius: $br-S;
+  }
 }
 .small-section {
   padding: 20px 30px;
   border-radius: $br;
   background: $white;
   margin-bottom: $section-margin;
+  @include breakpoint($mini-tablet) {
+    border-radius: $br-S;
+  }
 }
 
 // TITLES
@@ -95,6 +102,12 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    @include breakpoint($desktop) {
+      font-size: $font-size-XXL;
+    }
+    @include breakpoint($mini-tablet) {
+      font-size: $font-size-XL;
+    }
     &.start-animation {
       @include animation-text-slide-up(0.5s, 0s);
     }

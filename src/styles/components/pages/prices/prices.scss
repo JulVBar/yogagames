@@ -55,6 +55,7 @@
     @include breakpoint($mini-tablet) {
       flex-direction: column;
       align-items: center;
+      border-radius: $br-S;
     }
     &-block {
       color: $black;

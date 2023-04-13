@@ -90,6 +90,9 @@ main {
     @include breakpoint($desktop) {
         padding-top: 100px;
     }
+    @include breakpoint($mini-tablet) {
+        padding-top: 80px;
+    }
 }
 
 header {

@@ -102,12 +102,17 @@
     left: 50%;
     transform: translateX(-50%);
     transition: all .2s ease-in-out;
-    &.upped {
-      top: 0px;
-    }
     @include breakpoint($desktop) {
       top: 35px;
       padding: 0 30px;
+      width: 98.5%;
+    }
+    @include breakpoint($mini-tablet) {
+      border-radius: 20px;
+      width: 100%;
+    }
+    &.upped {
+      top: 0px;
     }
     &.mobile-menu-opened {
       top: 0;

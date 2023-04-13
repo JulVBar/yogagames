@@ -56,28 +56,40 @@
     @include breakpoint($desktop) {
       display: flex;
     }
+    &-link {
+      color: $black;
+      font-weight: 500;
+      font-size: $font-size-L;
+      display: block;
+      padding: 15px 0;
+      transition: all .2s ease-in-out;
+      &:hover {
+        color: $green;
+      }
+      &.active {
+        color: $green;
+      }
+    }
     nav {
       display: flex;
-      margin-bottom: 20px;
     }
     &-nav {
       display: flex;
       flex-direction: column;
       justify-content: left;
-      li {
-        a {
-          color: $black;
-          font-weight: 500;
-          font-size: $font-size-L;
-          display: block;
-          padding: 15px 0;
-          transition: all .2s ease-in-out;
-          &:hover {
-            color: $green;
-          }
-          &.active {
-            color: $green;
-          }
+
+      li a {
+        color: $black;
+        font-weight: 500;
+        font-size: $font-size-L;
+        display: block;
+        padding: 15px 0;
+        transition: all .2s ease-in-out;
+        &:hover {
+          color: $green;
+        }
+        &.active {
+          color: $green;
         }
       }
       ul {

@@ -2,6 +2,8 @@
 $left-indent: 30px;
 
 .form {
+  max-width: 560px;
+  margin: 0 auto;
   &__control {
     position: relative;
     margin-bottom: 30px;
