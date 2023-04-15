@@ -61,10 +61,13 @@
   }
 }
 .small-section {
-  padding: 20px 30px;
+  padding: 20px 70px;
   border-radius: $br;
   background: $white;
   margin-bottom: $section-margin;
+  @include breakpoint($desktop) {
+    padding: 20px 30px;
+  }
   @include breakpoint($mini-tablet) {
     border-radius: $br-S;
   }
@@ -114,6 +117,47 @@
   }
   @include breakpoint($mini-tablet) {
     margin-bottom: 20px;
+  }
+}
+
+.huge-title {
+  font-size: 100px;
+  display: inline-flex;
+  font-family: $font-family-title;
+  text-transform: uppercase;
+  line-height: 140%;
+  font-weight: 700;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  &--black {
+    color: $black;
+    font-size: 100px;
+    display: inline-flex;
+    font-family: $font-family-title;
+    text-transform: uppercase;
+    line-height: 140%;
+    font-weight: 700;
+    @include breakpoint(1400px) {
+      font-size: 70px;
+    }
+    @include breakpoint($desktop) {
+      font-size: 50px;
+    }
+    @include breakpoint($mobile) {
+      font-size: $font-size-XL;
+    }
+  }
+  @include breakpoint(1400px) {
+    font-size: 80px;
+  }
+  @include breakpoint($tablet) {
+    font-size: 50px;
+  }
+  @include breakpoint($mobile) {
+    font-size: $font-size-XL;
   }
 }
 

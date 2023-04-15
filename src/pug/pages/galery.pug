@@ -4,5 +4,46 @@ block main-vars
   - var title = 'Page title';
   - var description = 'Description';
   - var keywords = 'Description';
-  - var bodyClass = 'body';
+  - var bodyClass = 'body body-galery';
   - var pageClass = 'page__galery';
+
+block content
+  .container
+    section.galery-header
+      .galery-header__caption(data-speed=".6")
+        h1.huge-title--black galerija
+        ul.list-reset.galery-header__categories
+          li All
+          li.active Studio
+          li Birthday Parties
+          li Classes
+          li Category
+          li Kids
+      .galery-header__image.image-contain(data-speed=".75")
+        img(src="images/head.png", alt="")
+    section.galery-grid
+      .galery-grid__wrapper
+        .galery-grid__image.image-cover
+          img(src="images/woman_4.jpg", alt="")
+          .galery-grid__image-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrolling
+      .galery-grid__wrapper
+        .galery-grid__image.image-cover
+          img(src="images/woman_8.jpg", alt="")
+          .galery-grid__image-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrollin
+      .galery-grid__wrapper
+        .galery-grid__image.image-cover
+          img(src="images/painting_1.jpg", alt="")
+          .galery-grid__image-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrolling
+      .galery-grid__wrapper
+        .galery-grid__image.image-cover
+          img(src="images/meditation_2.jpg", alt="")
+          .galery-grid__image-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrollin
+      .galery-grid__wrapper
+        .galery-grid__image.image-cover
+          img(src="images/kids_4.jpg", alt="")
+          .galery-grid__image-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrolling
+      .galery-grid__wrapper
+        .galery-grid__image.image-cover
+          img(src="images/kids_3.jpg", alt="")
+          .galery-grid__image-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor amount scrollin
+

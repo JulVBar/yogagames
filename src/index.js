@@ -9,6 +9,7 @@ import gsapAnimation from './js/gsapAnimation';
 import videoSlider from './js/videoSlider';
 import modal from './js/modal';
 import form from './js/form';
+import eventSlider from './js/eventSlider';
 
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		burger();
 		modal();
 		form();
+		eventSlider();
 
 		if (ScrollTrigger.isTouch !== 1) {
 			ScrollSmoother.create({

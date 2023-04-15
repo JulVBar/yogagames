@@ -31,7 +31,10 @@
 }
 .kids-prices,
 .adult-prices {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  @include breakpoint($tablet) {
+    margin-bottom: 50px;
+  }
 }
 
 .price {

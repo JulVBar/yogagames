@@ -1,0 +1,99 @@
+.page__events {
+  text-align: center;
+  section h2 {
+    margin-bottom: 50px;
+    @include breakpoint($tablet) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.events__subtitle {
+  font-size: $font-size-L;
+  font-family: $font-family-title;
+  color: $purple-dark;
+  margin-top: -30px;
+  margin-bottom: 70px;
+  &.start-animation {
+    @include animation-blur-out(1s, 0.1s);
+  }
+  @include breakpoint($tablet) {
+    margin-bottom: 50px;
+  }
+  @include breakpoint($mini-tablet) {
+    font-size: $font-size-M;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+.events {
+  &__includes,
+  &__services {
+    margin-bottom: 100px;
+    @include breakpoint($tablet) {
+      margin-bottom: 50px;
+    }
+    @include breakpoint($tablet) {
+      margin-bottom: 30px;
+    }
+  }
+  &__promo {
+    background: $gray-2;
+    transition: all 0.5s linear;
+    font-size: $font-size-XL;
+    line-height: 140%;
+    color: $gray-2;
+    font-family: $font-family-title;
+    span {
+      padding-right: 20px;
+      transition: all 0.5s linear;
+    }
+    &.scroll-animation {
+      background: $purple;
+      color: $white;
+      span {
+        color: $green;
+      }
+    }
+    @include breakpoint($desktop) {
+      font-size: $font-size-L;
+    }
+    @include breakpoint($tablet) {
+      background: $purple;
+      color: $white;
+      span {
+        color: $green;
+      }
+    }
+    @include breakpoint($mini-tablet) {
+      font-size: $font-size-M;
+    }
+  }
+}
+.events__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include breakpoint($mini-tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+}
+
+// Events block animation
+.events-fade-anim {
+  &.start-animation {
+    @include animation-fade-in(1s);
+  }
+}
+
+// Events text in block animation
+.events-slide-anim {
+  &.start-animation {
+    @include animation-slide-in-from-left(0.5s, 0s);
+  }
+}

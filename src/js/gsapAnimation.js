@@ -178,9 +178,120 @@ function gsapAnimation() {
             })
         })
     
+
+        gsap.from('.events__promo', {
+            scrollTrigger: {
+                trigger: '.events__promo',
+                start: '-600',
+                end: 'bottom',
+                scrub: true,
+                once: true,
+                toggleClass: 'scroll-animation'
+            }
+        })
+        
     
-    
-    
+        // Adults animation
+
+        const adultBlocks = document.querySelectorAll('.adults__block');
+        const indexes = [1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22];
+        adultBlocks.forEach((item, i)=> {
+            if (indexes.includes(i)) {
+                item.classList.add('gsap-right');
+                item.setAttribute('data-speed', '1.1');
+            } else {
+                item.classList.add('gsap-left');
+                item.setAttribute('data-speed', '.9');
+            }
+        })
+
+        let itemsL = gsap.utils.toArray('.gsap-left');
+        
+        itemsL.forEach(item => {
+            gsap.fromTo(item, { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    start: '-750',
+                    end: '-100',
+                    scrub: true
+                }
+            })
+        })
+        let itemsR = gsap.utils.toArray('.gsap-right')
+        itemsR.forEach(item => {
+            gsap.fromTo(item, { opacity: 0, x: 50 }, {
+                opacity: 1, x: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    start: '-550',
+                    end: 'top',
+                    scrub: true
+                }
+            })
+        })
+
+        gsap.fromTo('.adults__section-hero', { opacity: 1 }, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.adults__section-hero',
+                start: 'center',
+                end: '450',
+                scrub: true
+            }
+        })
+        
+
+
+        // Adults galery
+
+        const galeryBlocks = document.querySelectorAll('.galery-grid__wrapper');
+       
+        galeryBlocks.forEach((item, i)=> {
+            if (i % 2 == 0) {
+                item.classList.add('galery-grid__wrapper-left');
+                item.setAttribute('data-speed', '1.1');
+            } else {
+                item.classList.add('galery-grid__wrapper-right');
+                item.setAttribute('data-speed', '.9');
+            }
+        })
+
+        let photosL = gsap.utils.toArray('.galery-grid__wrapper-left .galery-grid__image');
+        
+        photosL.forEach(item => {
+            gsap.fromTo(item, { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    start: '-750',
+                    end: '-100',
+                    scrub: true
+                }
+            })
+        })
+        let photosR = gsap.utils.toArray('.galery-grid__wrapper-right .galery-grid__image')
+        photosR.forEach(item => {
+            gsap.fromTo(item, { opacity: 0, x: 50 }, {
+                opacity: 1, x: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    start: '-550',
+                    end: 'top',
+                    scrub: true
+                }
+            })
+        })
+
+        gsap.fromTo('.galery-header', { opacity: 1 }, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.galery-header',
+                start: 'center',
+                end: '450',
+                scrub: true
+            }
+        })
     
     // data-speed="2" data-lag="0.5"
                 // gsap.fromTo('.about', { opacity: 1 }, {

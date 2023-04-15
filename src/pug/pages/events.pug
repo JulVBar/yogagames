@@ -6,3 +6,27 @@ block main-vars
   - var keywords = 'Description';
   - var bodyClass = 'body';
   - var pageClass = 'page__events';
+
+block content
+  .container
+    +pageTitle('YOGA BIRTHDAY PARTY')
+    p.events__subtitle(data-animation) Organize an unforgettable holiday for your child!
+    section.events__includes
+      h2.section-title.events-fade-anim Price Includes
+      .events__inner
+        +eventService('images/icon/balloons.png', 'Украшенный зал в тематике Happy Birthday')
+        +eventService('images/icon/plate.png', 'Disposable utensils, candles and fresh flowers on the tables')
+        +eventService('images/icon/camera.png', '50 digital photos from the event (made on quality phone camera presenters)')
+        +eventService('images/icon/present.png', 'Branded package "Yoga Games" with gift for the birthday boy and surprises for each guest to have')
+    section.events__services
+      h2.section-title.events-fade-anim Additional Services
+      .events__inner
+        +eventService('images/icon/birthday-cake.png', 'Birthday Cake')
+        +eventService('images/icon/dinner-table.png', 'Treats in the table')
+      .small-section.events-fade-anim Groups are held in Latvian and Russian on different days of the week (please specify)
+      .events__promo.mid-section
+        span 10% DISCOUNT
+        | ON ALL EVENTS FOR MONTHLY YOGA SEASON TICKET HOLDERS
+    section.events
+      h2.section-title.events-fade-anim Party Programs
+      include ../includes/single-event
