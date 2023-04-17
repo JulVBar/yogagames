@@ -9,6 +9,7 @@
   &-header {
     display: flex;
     padding: 0 200px;
+    will-change: transform;
     @include breakpoint(1400px) {
       padding: 0 100px;
     }
@@ -37,6 +38,7 @@
       display: flex;
       justify-content: left;
       align-items: center;
+      will-change: transform;
       img {
         max-width: 600px;
       }
@@ -48,6 +50,7 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
+      will-change: transform;
       @include breakpoint($mini-tablet) {
         justify-content: center;
       }
@@ -78,6 +81,7 @@
       display: flex;
       padding: 70px;
       padding-top: 150px;
+      will-change: transform;
       @include breakpoint($desktop) {
         padding: 50px;
         padding-top: 150px;
@@ -112,6 +116,7 @@
       overflow: hidden;
       position: relative;
       top: -150px;
+      will-change: transform;
       @include breakpoint($tablet) {
         top: 0px;
         height: 400px;
@@ -129,6 +134,7 @@
         transition: all 0.5s linear;
         visibility: hidden;
         transform: translateX(-100%);
+        will-change: transform;
       }
       &:hover {
         .galery-grid__image-description {

@@ -283,7 +283,7 @@ function gsapAnimation() {
             })
         })
 
-        gsap.fromTo('.galery-header', { opacity: 1 }, {
+        gsap.fromTo('.galery-header__image', { opacity: 1 }, {
             opacity: 0,
             scrollTrigger: {
                 trigger: '.galery-header',
