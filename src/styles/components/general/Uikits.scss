@@ -104,7 +104,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    // text-fill-color: transparent;
     @include breakpoint($desktop) {
       font-size: $font-size-XXL;
     }

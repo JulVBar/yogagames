@@ -4,5 +4,69 @@ block main-vars
   - var title = 'Page title';
   - var description = 'Description';
   - var keywords = 'Description';
-  - var bodyClass = 'body';
+  - var bodyClass = 'body body-program';
   - var pageClass = 'page__program';
+
+block content
+  .container
+    section.about-intro
+      .about-intro__content(data-animation)
+        h1.huge-title Добро пожаловать!
+        p Я Светлана Рыбакова, основатель йога пространства «Yoga games», преподаватель йоги для детей и взрослых, автор программы для детей « Познай себя через игру», автор мастер классов для детей и взрослых, автор программы для взрослых « Саморазвитие через йогу и медитацию», ведущий звуковых медитаций с храмовыми тибетскими чашами.
+      .about-intro__image
+        .about-intro__image-wrapper.image-cover(data-animation)
+          img(src="images/svet_1.jpg", alt="")
+    section.about-space
+      .about-space__image
+        .about-space__image-wrapper.image-cover.about-space__img-anim
+          img(src="images/svet_2.jpg", alt="")
+      .about-space__content
+        .about-space__content-top
+          h2.section-title.about-space__text-anim Пространство, где каждый может быть самим собой
+          .about-space__content-text.about-space__text-anim
+            p Моя цель - предложить детям и семьям здоровый, осознанный способ наслаждаться движением, внимательностью, весельем, творчеством, физическими упражнениями и спокойствием - все в одном флаконе.
+            p “Yoga games” - Это гостеприимная среда, где каждый может быть самим собой. Ребенок вы или взрослый, уровень физической подготовки, одежда для йоги, гибкость - все это ничего не значит - приходите такими, какие вы есть.
+        .about-space__content-bottom
+          .about-space__content-image-wrapper.image-cover.about-space__img-anim
+            img(src="images/svet_3.jpg", alt="")
+          .about-space__content-image-wrapper.about-space__content-image-wrapper--mobile.image-cover.about-space__img-anim
+            img(src="images/boy_1.jpg", alt="")
+    section.about-class
+      .about-class__content
+        .about-class__content-title 
+          h2.section-title.about-class__text-anim Занятие, которое дополнит график ребенка и поможет ему стать лучше
+        .about-class__content-text.about-class__text-anim
+          p Целью данной программы является знакомство с йогой и ее позитивными проявлениями в реальной жизни: концентрация, дыхание и расслабление.
+          p При регулярных занятиях, погружаясь в атмосферу йога игры, нарабатываются очень важные навыки для ребенка, которые помогают ему адаптироваться в школьной жизни, продвинуться в спорте, снизить уровень стресса, улучшить здоровье и успеваемость.
+      .about-class__image
+        .about-class__image-wrapper.image-cover.about-class__img-anim 
+          img(src="images/svet_4.jpg", alt="")
+    section.about-cards
+      .about-cards__item.big-section(data-speed=".7")
+        p На праздничных мероприятиях и мастер классах вы получите новые навыки и узнаете, как неожиданно и креативно можно провести день рождения в кругу друзей и родственников в нашем йога пространстве или на вашей территории.
+        a(href="#").secondary-button Lear More
+      .about-cards__item.big-section(data-speed=".85")
+        p В “Yoga games”пространстве вы можете насладиться звуковыми вибрациями тибетских храмовых чаш, понизить уровень стресса, зарядиться энергией и почувствовать вкус жизни осознанно.
+        a(href="#").secondary-button Lear More
+      .about-cards__item.big-section(data-speed="1.0")
+        p На ретрите вы гармонизируетесь с самим собой и природой, активируя собственные изненные силы.
+        a(href="#").secondary-button Lear More
+    section.about-footer
+      .about-footer__text.big-section
+        span
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="240" height="240">
+            <path d="M42.991,9.131L42.991,9.131c0,0.459-0.28,0.882-0.712,1.036C38.619,11.472,33,16.271,33,24c0,1.328,0.227,2,0.74,2c0.601,0,1.554-1,4.26-1c3.289,0,7,2.622,7,7.059C45,35.942,42.088,40,37,40c-4.135,0-10-3.083-10-12.093c0-12.478,9.397-17.774,14.432-19.811C42.175,7.796,42.991,8.329,42.991,9.131z" />
+            <path d="M18.991,9.131L18.991,9.131c0,0.459-0.28,0.882-0.712,1.036C14.619,11.472,9,16.271,9,24c0,1.328,0.227,2,0.74,2c0.601,0,1.554-1,4.26-1c3.289,0,7,2.622,7,7.059C21,35.942,18.088,40,13,40C8.865,40,3,36.917,3,27.907c0-12.478,9.397-17.774,14.432-19.811C18.175,7.796,18.991,8.329,18.991,9.131z" />
+          </svg>
+        p Я горжусь тем, что построила это прекрасное гармоничное пространство, и пригласила прекрасных творческих людей для совместной деятельности и саморазвития.
+        p Рада приветствовать вас в пространстве “Yoga games”!
+        p С искренней благодарностью и любящем сердцем, до скорой встречи!
+        p Светлана
+      .about-footer__marquee.about-footer__marquee--top
+        span Yoga games Yoga games
+      .about-footer__marquee.about-footer__marquee--bottom
+        span Yoga games Yoga games
+        
+
+
+

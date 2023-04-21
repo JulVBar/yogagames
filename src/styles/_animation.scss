@@ -253,3 +253,14 @@
         transform:scale(1.75);
     }
 }
+
+@keyframes clip-from-left {
+    to {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+@mixin animation-clip-from-left () {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    animation: clip-from-left 0.7s linear forwards;
+}

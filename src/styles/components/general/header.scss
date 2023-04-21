@@ -146,7 +146,7 @@
         &:hover ~ .nav__hover {
           transform: scale(1);
           animation: rotate-scale 3s linear infinite;
-          animation-delay: 0.2s;
+          animation-delay: .2s;
         }
         &.active ~ .nav__hover {
           transform: scale(1);

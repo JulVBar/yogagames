@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMqpackerPlugin = require('css-mqpacker-webpack-plugin');
-
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
@@ -30,6 +30,7 @@ const optimization = () => {
     if (isProd) {
         config.minimizer = [
             new TerserPlugin(),
+            // new ImageminWebpWebpackPlugin(),
             // new CssMqpackerPlugin() //объединяет медиа-запросы
         ];
     }
@@ -54,6 +55,7 @@ module.exports = {
         //             removeComments: isProd //удаляет комменты
         //         }
         // }),
+        new ImageminWebpWebpackPlugin(),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
@@ -80,7 +82,7 @@ module.exports = {
         ...PAGES.map(page => new HTMLWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`
-        }))
+        })),
     ],
     module: {
         rules: [

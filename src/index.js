@@ -17,11 +17,20 @@ window.addEventListener('DOMContentLoaded', function() {
     btnToTop();
     main();
 		gsapAnimation();
-		videoSlider();
 		burger();
-		modal();
-		form();
-		eventSlider();
+		// modal();
+
+		if (document.querySelector('.page__home')) {
+			videoSlider();
+		}
+		
+		if (document.querySelector('.page__contacts')) {
+			form();
+		}
+
+		if (document.querySelector('.page__events')) {
+			eventSlider();
+		}
 
 		if (ScrollTrigger.isTouch !== 1) {
 			ScrollSmoother.create({

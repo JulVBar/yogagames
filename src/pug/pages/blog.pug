@@ -6,3 +6,74 @@ block main-vars
   - var keywords = 'Description';
   - var bodyClass = 'body';
   - var pageClass = 'page__blog';
+
+block content
+  .container
+    section.blog__header
+      +pageTitle('BLOG')
+      ul.list-reset.blog__header-categories
+        li All
+        li.active Yoga
+        li Gooking
+        li Retreat 
+        li Meditation
+    section 
+    section.blog__posts.last-posts
+      ul.list-reset.last-posts__list
+        li.last-posts__item
+          .last-posts__date 23 January 2023
+          .last-posts__image.image-cover
+            img(src="images/cooking_.jpg", alt="")
+          .last-posts__content
+            .animated-container
+              h3.animated-inner What good is yoga in hammocks? Who should do air yoga and what to expect from the lessons
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose.
+          .last-posts__button
+            a(href="single-post.html") Read more
+        li.last-posts__item
+          .last-posts__date 23 January 2023
+          .last-posts__image.image-cover
+            img(src="images/mother_daughter_1.jpg", alt="")
+          .last-posts__content
+            .animated-container
+              h3.animated-inner The philosophy of yoga nutrition for beginners: vegetarianism and why?
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
+          .last-posts__button
+            a(href="single-post.html") Read more
+        li.last-posts__item
+          .last-posts__date 23 January 2023
+          .last-posts__image.image-cover
+            img(src="images/woman_9.jpg", alt="")
+          .last-posts__content
+            .animated-container
+              h3.animated-inner TWhat good is yoga in hammocks? Who should do air yoga and what to expect from the lessons air yoga and what
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
+          .last-posts__button
+            a(href="single-post.html") Read more
+        li.last-posts__item
+          .last-posts__date 23 January 2023
+          .last-posts__image.image-cover
+            img(src="images/kids_5.jpg", alt="")
+          .last-posts__content
+            .animated-container
+              h3.animated-inner The philosophy of yoga nutrition for beginners: vegetarianism and why?
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
+          .last-posts__button
+            a(href="single-post.html") Read more
+        li.last-posts__item
+          .last-posts__date 23 January 2023
+          .last-posts__image.image-cover
+            img(src="images/mother_daughter_2.jpg", alt="")
+          .last-posts__content
+            .animated-container
+              h3.animated-inner The philosophy of yoga nutrition for beginners: vegetarianism and why?
+            .animated-container
+              p.animated-inner The retreat can be done over two days and there’s around 2.5 hours’ of classes each day. You might choose to do.
+          .last-posts__button
+            a(href="single-post.html") Read more
+      .last-posts-mobiledrag Drag -> to see more news
+    include ../includes/pagination
