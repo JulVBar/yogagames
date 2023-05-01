@@ -26,17 +26,18 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 50px;
   span, a {
     color: $gray-dark;
     cursor: pointer;
     display: block;
     text-decoration: none;
     transition: all .2s linear;
-    margin-right: 0 10px;
+    margin: 0 10px;
     &:hover {
       color: $black;
     }
-    &.active {
+    &.current {
       color: $black;
     }
   }

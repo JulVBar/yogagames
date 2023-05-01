@@ -50,12 +50,12 @@
 .single-event__swiper {
   &-wrapper {
     margin-bottom: 30px;
-    height: 500px;
+    height: 500px !important;
     @include breakpoint($tablet) {
-      height: 450px;
+      height: 450px !important;
     }
     @include breakpoint($mini-tablet) {
-      height: 400px;
+      height: 400px !important;
     }
   }
 }
