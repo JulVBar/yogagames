@@ -11,12 +11,14 @@ block content
   .container
     section.blog__header
       +pageTitle('BLOG')
-      ul.list-reset.blog__header-categories
-        li All
-        li.active Yoga
-        li Gooking
-        li Retreat 
-        li Meditation
+      nav
+        ul.list-reset.blog__header-categories.category-list
+          li 
+            a(href="#") All
+          li.active
+            a(href="#") Meditation
+          li 
+            a(href="#") Retreat
     section 
     section.blog__posts.last-posts
       ul.list-reset.last-posts__list

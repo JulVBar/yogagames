@@ -55,7 +55,7 @@
     @include breakpoint($tablet) {
       padding: 20px 30px;
     }
-    @include breakpoint($mini-tablet) {
+    @include breakpoint($tablet) {
       flex-direction: column;
       align-items: center;
       border-radius: $br-S;
@@ -66,60 +66,32 @@
       text-align: left;
       display: flex;
       flex-wrap: nowrap;
+      justify-content: space-between;
       &:nth-child(1) {
         width: 45%;
-        @include breakpoint($mini-tablet) {
+        font-weight: 700;
+        @include breakpoint($tablet) {
           width: auto;
+          margin-bottom: 10px;
+          text-align: center;
         }
       }
       &:nth-child(2) {
-        width: 40%;
+        width: 45%;
         @include breakpoint($tablet) {
-          flex-direction: column;
-        }
-        @include breakpoint($mini-tablet) {
-          flex-direction: row;
           width: auto;
+          margin-bottom: 10px;
+          text-align: center;
         }
       }
       &:nth-child(3) {
         width: 10%;
-        @include breakpoint($mini-tablet) {
-          width: auto;
-        }
-      }
-      &:not(:last-child) {
-        @include breakpoint($mini-tablet) {
-          margin-bottom: 20px;
-        }
-      }
-      span {
-        display: inline-block;
-        &:not(:last-child) {
-          margin-right: 20px;
-        }
-      }
-      &-amount {
-        font-size: $font-size-L;
         font-weight: 700;
-      }
-      &-name {
         @include breakpoint($tablet) {
-          width: 180px;
-        }
-        @include breakpoint($mini-tablet) {
           width: auto;
+          margin-bottom: 30px;
+          text-align: center;
         }
-      }
-      &-price {
-        font-size: $font-size-L;
-        font-weight: 700;
-      }
-      &-per-month {
-        color: $gray-dark;
-      }
-      &-duration {
-        
       }
     }
   }
@@ -174,23 +146,27 @@
     }
     &-list {
       display: flex;
-      justify-content: left;
+      justify-content: space-between;
       text-align: left;
+      width: 100%;
+      @include breakpoint($tablet) {
+        width: 50%;
+      }
+      @include breakpoint($mobile) {
+        width: 100%;
+      }
       &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
     &-caption {
-      width: 200px;
-      @include breakpoint($tablet) {
-        width: 150px;
-      }
+      width: auto;
+      
     }
     &-info {
-      width: 70px;
+      width: auto;
       text-align: left;
       font-weight: 700;
     }
   }
-  
 }

@@ -172,16 +172,6 @@ function gsapAnimation() {
                     }
                 })
             })
-            gsap.from('.events__promo', {
-                scrollTrigger: {
-                    trigger: '.events__promo',
-                    start: '-600',
-                    end: 'bottom',
-                    scrub: true,
-                    once: true,
-                    toggleClass: 'scroll-animation'
-                }
-            })
 		}
         
         if (document.querySelector('.page__adults')) {

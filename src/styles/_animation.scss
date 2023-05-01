@@ -264,3 +264,15 @@
     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
     animation: clip-from-left 0.7s linear forwards;
 }
+
+@keyframes fillTextColor {
+    to {
+        transform: translate(-50%, -30%) scale(2.9);
+    }
+}
+
+@mixin animation-fillTextColor ($duration, $delay) {
+    transform: translate(-50%, -30%) scale(0);
+    animation: fillTextColor $duration ease-in-out forwards;
+    animation-delay: $delay;
+}

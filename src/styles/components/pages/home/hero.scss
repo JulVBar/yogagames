@@ -8,6 +8,7 @@
     font-family: $font-family-title;
     font-weight: 700;
     font-size: $font-size-XXXL;
+    text-transform: uppercase;
     text-align: center;
     @include breakpoint($desktop) {
       font-size: $font-size-XXL;
@@ -63,10 +64,8 @@
     &-small {
       width: 25%;
       margin: 0 auto;
-      opacity: 0;
-      transition: all 0.2s linear;
       &.start-animation {
-        opacity: 1;
+        @include animation-fade-in(0.4s);
       }
       &:not(:first-child) {
         @include breakpoint($mobile) {
@@ -79,7 +78,7 @@
     position: relative;
     z-index: 10;
     transform: translateY(-20%);
-    opacity: 0;
+    // opacity: 0;
     &.start-animation {
       @include animation-slide-down(0.3s, 1.2s);
     }
@@ -95,15 +94,8 @@
 
 #circleGradient {
   top: 50%;
-  transform: translate(-50%, -30%) scale(0);
+  transform: translate(-50%, -30%) scale(2.8);
   &.start-animation {
-    animation: fillTextColor 1s ease-in-out forwards;
-    animation-delay: 0.3s;
-  }
-}
-
-@keyframes fillTextColor {
-  to {
-    transform: translate(-50%, -30%) scale(2.8);
+    @include animation-fillTextColor(1s, 0.3s);
   }
 }

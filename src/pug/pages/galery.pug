@@ -12,13 +12,14 @@ block content
     .galery-header
       .galery-header__caption(data-speed=".6")
         h1.huge-title--black galerija
-        ul.list-reset.galery-header__categories
-          li All
-          li.active Studio
-          li Birthday Parties
-          li Classes
-          li Category
-          li Kids
+        nav
+          ul.list-reset.galery-header__categories.category-list
+            li 
+              a(href="#") All
+            li.active
+              a(href="#") Meditation
+            li 
+              a(href="#") Retreat
       .galery-header__image.image-contain(data-speed=".75")
         img(src="images/head.png", alt="")
     .galery-grid

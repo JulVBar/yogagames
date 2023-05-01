@@ -39,20 +39,16 @@
     }
   }
   &__promo {
-    background: $gray-2;
+    background: $purple;
     transition: all 0.5s linear;
     font-size: $font-size-XL;
     line-height: 140%;
-    color: $gray-2;
+    color: $white;
     font-family: $font-family-title;
     span {
       padding-right: 20px;
       transition: all 0.5s linear;
-    }
-    &.scroll-animation {
-      background: $purple;
-      color: $white;
-      span {
+      &:first-child {
         color: $green;
       }
     }

@@ -1,8 +1,14 @@
 .post {
   text-align: center;
+  img {
+    border-bottom: $br;
+  }
   &__inner {
     width: 80%;
     margin: 0 auto;
+    ul {
+      text-align: left;
+    }
     @include breakpoint($desktop) {
       width: 100%;
     }
@@ -78,3 +84,29 @@
     }
   }
 }
+
+//WP-styles//
+
+.post-categories {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    li {
+      margin: 0 5px;
+      cursor: pointer;
+      a {
+        color: $gray-dark;
+        text-decoration: none;
+        transition: all .2s linear;
+      }
+      &:hover a {
+        color: $green;
+      }
+    }
+  }
+}
+

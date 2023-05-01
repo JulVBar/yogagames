@@ -19,3 +19,25 @@
     }
   }
 }
+
+//WP-styles//
+
+.wp-pagenavi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  span, a {
+    color: $gray-dark;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-right: 0 10px;
+    &:hover {
+      color: $black;
+    }
+    &.active {
+      color: $black;
+    }
+  }
+}

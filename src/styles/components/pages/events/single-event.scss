@@ -50,6 +50,13 @@
 .single-event__swiper {
   &-wrapper {
     margin-bottom: 30px;
+    height: 500px;
+    @include breakpoint($tablet) {
+      height: 450px;
+    }
+    @include breakpoint($mini-tablet) {
+      height: 400px;
+    }
   }
 }
 
@@ -72,6 +79,14 @@
 .single-event__swiper-btn-next {
   cursor: pointer;
   margin: 0 30px;
+  svg {
+    path {
+      fill: $green;
+    }
+    circle {
+      stroke: $green;
+    }
+  }
 }
 
 .single-event__swiper-btn-next {

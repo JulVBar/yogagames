@@ -55,7 +55,7 @@ module.exports = {
         //             removeComments: isProd //удаляет комменты
         //         }
         // }),
-        new ImageminWebpWebpackPlugin(),
+        // new ImageminWebpWebpackPlugin(),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [

@@ -47,28 +47,9 @@
       }
     }
     &__categories {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
       will-change: transform;
       @include breakpoint($mini-tablet) {
         justify-content: center;
-      }
-      li {
-        color: $black;
-        transition: all .2s linear;
-        cursor: pointer;
-        margin-bottom: 10px;
-        &:not(:last-child) {
-          margin-right: 20px;
-        }
-        &:hover {
-          color: $green;
-        }
-        &.active {
-          transform: translateY(-15%);
-          color: $green;
-        }
       }
     }
   }
