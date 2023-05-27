@@ -1,23 +1,39 @@
 .primary-button {
   display: inline-block;
+  position: relative;
   padding: 5px 30px;
-  // min-width: 250px;
-  min-height: 38px;
-  color: $black;
-  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: $font-size-S;
+  letter-spacing: 1.2px;
   text-align: center;
-  background: $green;
+  background: $gradient;
   border-radius: 50px;
-  border: 2px solid $green;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background: transparent;
+  transition: all 0.3s ease-in-out;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 110%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    background: #ffffff36;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover:after {
+    opacity: 1;
   }
 }
 
 .secondary-button {
-  display: inline;
+  display: inline-block;
+  width: 99%;
   position: relative;
   padding: 5px 0px;
   background-image: $text-gradient;
@@ -25,6 +41,7 @@
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: $font-size-S;
   letter-spacing: 1.2px;
   text-align: center;
   border-radius: 50px;
@@ -34,7 +51,7 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 100%;
+    width: 99%;
     height: 100%;
     top: 50%;
     left: 50%;
@@ -46,31 +63,58 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 101%;
+    width: 100%;
     height: 110%;
     top: 50%;
     left: 50%;
     border-radius: 50px;
     transform: translate(-50%, -50%);
     background: $gradient;
-
   }
   &:hover:before {
     background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
+    animation: background-move 5s ease infinite;
   }
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.special-button {
+  display: inline;
+  position: relative;
+  padding: 5px 50px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  span {
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: $font-size-S;
+    letter-spacing: 1.2px;
+    text-align: center;
+    background-image: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    background: $white;
+  }
+  &:hover {
+    border: 2px solid $purple-dark;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
 }
 
 // SECTIONS

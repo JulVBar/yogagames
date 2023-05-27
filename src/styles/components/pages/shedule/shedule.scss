@@ -53,7 +53,7 @@
     }
     &-name {
       font-weight: 700;
-      font-size: $font-size-XL;
+      font-size: $font-size-L;
       color: $black;
       margin-bottom: 20px;
       line-height: 140%;
@@ -68,7 +68,6 @@
       }
     }
     &-button {
-      // min-width: 100%;
       @include breakpoint($mini-tablet) {
         display: none;
       }

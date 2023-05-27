@@ -381,7 +381,7 @@
     }
     a {
       background: transparent;
-      color: $white;
+      text-align: center;
       @include breakpoint($tablet) {
         width: 250px;
         margin: 0 auto;
