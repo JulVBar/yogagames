@@ -11,7 +11,7 @@ body {
     color: $black;
     font-size: $font-size-M;
     overflow-y: scroll;
-    @include breakpoint($desktop) {
+    @include breakpoint($mobile) {
         font-size: $font-size-S;
     }
     &.no-scroll {

@@ -7,17 +7,17 @@ $gray:#F5F5F5;
 $gray-2:#fcfbfa;
 $gray-dark:#92949A;
 // $green-2: #D2F179;
-$green: #8DFFBA;
+$green: #6F7CF5;
 $red: #F84F39;
 $yellow: #FFC940;
 $purple: #B797D7;
 $purple-dark: #6F7CF5;
-$orange: #FF9E8D;
+$orange: #FF8F32;
 $pink: #FF8DB5;
 $blue: #73AEFC;
 $fucia: #FA425F;
 $gradient: linear-gradient(90deg, $yellow 3.25%, $pink 35.3%, $purple 62.01%, $blue 97.78%);
-
+$text-gradient: linear-gradient(90deg, #FFC940 36.92%, #FF8DB5 43.8%, #B797D7 50.34%, #73AEFC 57.22%);
 $br: 50px;
 $br-S: 30px;
 $page-padding: 5vw;
@@ -25,8 +25,9 @@ $page-padding-S: 1vw;
 $section-margin: 20px;
 
 //font size
-$font-size-S: 16px;
-$font-size-M: 18px;
+$font-size-XS: 12px;
+$font-size-S: 14px;
+$font-size-M: 16px;
 $font-size-L: 24px;
 $font-size-XL: 36px;
 $font-size-XXL: 50px;

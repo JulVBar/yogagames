@@ -68,6 +68,7 @@
     display: flex;
     align-items: center;
     margin-right: 50px;
+
     @include breakpoint($mobile) {
       margin-right: 0px;
     }
@@ -82,9 +83,6 @@
       &:hover {
         color: $black;
       }
-    }
-    @include breakpoint($mobile) {
-      font-size: 12px;
     }
   }
   &__bottom {
@@ -182,9 +180,22 @@
   z-index: 1;
   width: 40px;
   height: 40px;
-  background: $green;
-  border-radius: 5px;
+  background: transparent;
+  border-radius: 10px;
   transition: all .2s ease-in-out;
+  background: $gradient;
+  &:before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -18px;
+    background: $white;
+    border-radius: 10px;
+    z-index: -1;
+  }
 }
 
 .nav li ul {

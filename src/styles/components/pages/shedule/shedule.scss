@@ -68,7 +68,7 @@
       }
     }
     &-button {
-      min-width: 100%;
+      // min-width: 100%;
       @include breakpoint($mini-tablet) {
         display: none;
       }
